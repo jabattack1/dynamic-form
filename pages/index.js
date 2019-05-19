@@ -6,7 +6,6 @@ import Layout from '../components/layout';
 import rooms from '../data/rooms.js';
 
 
-
 const Wrap = styled.div`
 	display: flex;
   	flex-wrap: wrap;
@@ -16,7 +15,7 @@ const Wrap = styled.div`
 const Index = (props) => (
 
 	<Wrap>
-		{props.rooms.map((room, code) => <Layout {...props} key={code} room={room} />)}
+		{props.rooms.map((room, i) => <Layout {...props} key={i} number={i} room={room} />)}
 	</Wrap>
 
 );
