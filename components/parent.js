@@ -10,12 +10,18 @@ import Room4 from '../components/room4.js';
 class Parent extends React.Component {
 
 	state = {
-		checked: ''
+		checked: '',
+		room4:[
+		    {
+		      adults: '',
+		      children: ''
+		    }
+  		]
 	}
 
 	render() {
 
-	  	let room4check = false;
+	  	let array = [];
 
 	  	const room1Value = (value) => {
 	  		console.log('room1');
@@ -46,10 +52,10 @@ class Parent extends React.Component {
 	  	};
 
 		const room4Value = (value) => {
-			console.log('room4');
-			console.log(value);
 	    	if(value[0] === true){
 	    		this.setState({checked:'room4'});
+	    		this.setState({room4:[{adults: value[2], children: value[3]}]},() => {
+    				console.log(this.state)});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
@@ -99,9 +105,18 @@ class Parent extends React.Component {
 	    return(
 	    	<div>
 	    		{children}
+				<button type='button' onClick={() => this.storeStuff()}>Submit</button>
 			</div>
 		)
 	} 
+
+	storeStuff(){
+		console.log('here');
+		let status = this.state
+		localStorage.setItem('submittedData', JSON.stringify(status));
+		var parsedData = JSON.parse(localStorage.getItem('submittedData'));
+		console.log(parsedData);
+	}
 
 }
 
