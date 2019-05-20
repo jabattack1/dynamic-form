@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Layout from '../components/layout';
+import Parent from '../components/parent.js';
 
 import rooms from '../data/rooms.js';
-
 
 const Wrap = styled.div`
 	display: flex;
@@ -13,9 +12,8 @@ const Wrap = styled.div`
   	margin: 0 auto;
 `
 const Index = (props) => (
-
 	<Wrap>
-		{props.rooms.map((room, i) => <Layout {...props} key={i} number={i} room={room} />)}
+		<Parent {...props} />
 	</Wrap>
 
 );
