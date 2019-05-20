@@ -22,23 +22,23 @@ const Box = styled.div`
 class Room3 extends React.Component{
 
 	constructor(props) {
+
 	  	super(props);
+
 	  	this.state = {
 	    	check: this.props.check,
-	    	adults: this.props.adults,
-			children: this.props.children
+			room: 3,
+	    	adults: this.state.adults || 0,
+			children: this.state.children || 0
 	  	};
 	}
 
 	state = {
-		room:3,
 	}
 
 
 	render() {
-
-
-
+		
 		let select = '';
 
 		if(this.state.check===true){
@@ -46,15 +46,19 @@ class Room3 extends React.Component{
 			<div>
 				<label><input type='checkbox' onClick={() => this.getStuff()} checked/></label>
 				<p>Adults 18+</p>
-					<select onChange={e=>this.setState({adults: e.target.value})}>
-						<option>1</option>
-						<option>2</option>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        })}>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 				<p>Children 0-17</p>
-					<select onChange={e=>this.setState({children: e.target.value})}>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        })}>
+						<option>{0}</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 			</div>
 		}
@@ -63,15 +67,15 @@ class Room3 extends React.Component{
 			<div>
 				<label><input type='checkbox' onClick={() => this.getStuff()} /></label>
 				<p>Adults 18+</p>
-					<select disabled onChange={e=>this.setState({adults: e.target.value})}>
-						<option>1</option>
-						<option>2</option>
+					<select disabled>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 				<p>Children 0-17</p>
-					<select disabled onChange={e=>this.setState({children: e.target.value})}>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
+					<select disabled>
+						<option>{0}</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 					
 			</div>
@@ -87,20 +91,14 @@ class Room3 extends React.Component{
 		);
 	}
 
-	componentDidUpdate(nextProps){
-  		if(this.props != nextProps) {
-    		this.setState({adults: 1});
-  		}		
-	}
-
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {
-    		this.setState({check: nextProps.check, adults: nextProps.adults, children: nextProps.children});
+    		this.setState({check: nextProps.check, adults: this.state.adults, children: this.state.children});
   		}
 	}
 
 	getStuff(){
-		this.setState({check: !this.state.check}, function () {
+		this.setState({check: !this.state.check, adults: this.state.adults || 1, children:this.state.children}, function () {
 			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
         });
 	}

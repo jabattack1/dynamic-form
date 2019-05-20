@@ -18,11 +18,13 @@ class Parent extends React.Component {
 	  	let room4check = false;
 
 	  	const room1Value = (value) => {
-	  		console.log(value);
+	  		console.log('room1');
+			console.log(value);
 	    	this.setState({checked:''});
 	  	};
 
 		const room2Value = (value) => {
+			console.log('room2');
 			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room2'});
@@ -33,6 +35,7 @@ class Parent extends React.Component {
 	  	};
 
 		const room3Value = (value) => {
+			console.log('room3');
 			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room3'});
@@ -43,7 +46,7 @@ class Parent extends React.Component {
 	  	};
 
 		const room4Value = (value) => {
-			console.log('kemp');
+			console.log('room4');
 			console.log(value);
 	    	if(value[0] === true){
 	    		this.setState({checked:'room4'});
@@ -59,18 +62,18 @@ class Parent extends React.Component {
 	  		children = 
 	  			<div>
 				    <Room1  fromChildToParentCallback={room1Value} />
-					<Room2  fromChildToParentCallback={room2Value} check={true} adults={0} children={0} />
-					<Room3  fromChildToParentCallback={room3Value} check={false} adults={0} children={0} />
-					<Room4  fromChildToParentCallback={room4Value} check={false} adults={0} children={0} /> 
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
 				</div>
 	  	}
 	  	else if(this.state.checked === 'room3'){
 	  		children = 
 	  			<div>
 				    <Room1  fromChildToParentCallback={room1Value} />
-					<Room2  fromChildToParentCallback={room2Value} check={true} adults={0} children={0} />
-					<Room3  fromChildToParentCallback={room3Value} check={true} adults={0} children={0} />
-					<Room4  fromChildToParentCallback={room4Value} check={false} adults={0} children={0} /> 
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
 				</div>
 	  	}
 
@@ -78,18 +81,18 @@ class Parent extends React.Component {
 	  		children = 
 	  			<div>
 				    <Room1  fromChildToParentCallback={room1Value} />
-					<Room2  fromChildToParentCallback={room2Value} check={true} adults={0} children={0} />
-					<Room3  fromChildToParentCallback={room3Value} check={true} adults={0} children={0} />
-					<Room4  fromChildToParentCallback={room4Value} check={true} adults={0} children={0} /> 
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} check={true} /> 
 				</div>
 	  	}
 	  	else{
 	  		children =
 	  			<div>
 				    <Room1  fromChildToParentCallback={room1Value} />
-					<Room2  fromChildToParentCallback={room2Value} check={false} adults={0} children={0} />
-					<Room3  fromChildToParentCallback={room3Value} check={false} adults={0} children={0} />
-					<Room4  fromChildToParentCallback={room4Value} check={false} adults={0} children={0} /> 
+					<Room2  fromChildToParentCallback={room2Value} check={false} />
+					<Room3  fromChildToParentCallback={room3Value} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
 				</div>
 	  	}
 	 	

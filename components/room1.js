@@ -22,9 +22,9 @@ const Box = styled.div`
 class Room1 extends React.Component{
 
 	state = {
-		room:1,
-		adults:1,
-		children:0,
+		room: 1,
+		adults: 1,
+		children: 0,
 		check: false
 	}
 
@@ -34,15 +34,19 @@ class Room1 extends React.Component{
 		select = 
 			<div>
 				<p>Adults 18+</p>
-					<select onChange={e=>this.setState({adults: e.target.value})}>
-						<option>1</option>
-						<option>2</option>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        })}>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 				<p>Children 0-17</p>
-					<select onChange={e=>this.setState({children: e.target.value})}>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        })}>
+						<option>{0}</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 			</div>
 		
