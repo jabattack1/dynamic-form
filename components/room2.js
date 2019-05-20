@@ -87,6 +87,12 @@ class Room2 extends React.Component{
 			</Grid>
 		);
 	}
+	
+	componentDidUpdate(nextProps){
+  		if(this.props != nextProps) {
+    		this.setState({adults: 1});
+  		}		
+	}
 
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {

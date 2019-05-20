@@ -87,6 +87,12 @@ class Room3 extends React.Component{
 		);
 	}
 
+	componentDidUpdate(nextProps){
+  		if(this.props != nextProps) {
+    		this.setState({adults: 1});
+  		}		
+	}
+
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {
     		this.setState({check: nextProps.check, adults: nextProps.adults, children: nextProps.children});

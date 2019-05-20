@@ -47,14 +47,14 @@ class Room4 extends React.Component{
 				<label><input type='checkbox' onClick={() => this.getStuff()} checked/></label>
 				<p>Adults 18+</p>
 					<select onChange={e=>this.setState({adults: e.target.value})}>
-						<option>1</option>
-						<option>2</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 				<p>Children 0-17</p>
 					<select onChange={e=>this.setState({children: e.target.value})}>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
+						<option>{0}</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 			</div>
 		}
@@ -64,14 +64,14 @@ class Room4 extends React.Component{
 				<label><input type='checkbox' onClick={() => this.getStuff()} /></label>
 				<p>Adults 18+</p>
 					<select disabled onChange={e=>this.setState({adults: e.target.value})}>
-						<option>1</option>
-						<option>2</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 				<p>Children 0-17</p>
 					<select disabled onChange={e=>this.setState({children: e.target.value})}>
-						<option>0</option>
-						<option>1</option>
-						<option>2</option>
+						<option>{0}</option>
+						<option>{1}</option>
+						<option>{2}</option>
 					</select>
 					
 			</div>
@@ -100,7 +100,7 @@ class Room4 extends React.Component{
 	}
 
 	getStuff(){
-		this.setState({check: !this.state.check}, function () {
+		this.setState({check: !this.state.check, adults: this.props.adults, children:this.props.children}, function () {
 			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
         });
 	}

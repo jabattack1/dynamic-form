@@ -23,8 +23,8 @@ class Room1 extends React.Component{
 
 	state = {
 		room:1,
-		adults:'1',
-		children:'0',
+		adults:1,
+		children:0,
 		check: false
 	}
 

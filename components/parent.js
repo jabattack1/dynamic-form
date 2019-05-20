@@ -18,10 +18,12 @@ class Parent extends React.Component {
 	  	let room4check = false;
 
 	  	const room1Value = (value) => {
+	  		console.log(value);
 	    	this.setState({checked:''});
 	  	};
 
 		const room2Value = (value) => {
+			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room2'});
 	    	}
@@ -31,6 +33,7 @@ class Parent extends React.Component {
 	  	};
 
 		const room3Value = (value) => {
+			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room3'});
 	    	}
@@ -40,6 +43,7 @@ class Parent extends React.Component {
 	  	};
 
 		const room4Value = (value) => {
+			console.log('kemp');
 			console.log(value);
 	    	if(value[0] === true){
 	    		this.setState({checked:'room4'});
