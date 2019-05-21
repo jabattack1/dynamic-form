@@ -8,7 +8,14 @@ import Room4 from '../components/room4.js';
 
 const gridWrap = styled.div`
 	width: calc(100%);
-	font:Verdana;
+	font: verdana;
+`;
+
+const Submit = styled.button`
+	position: relative;
+	display: flex;
+	margin-top: 10px;
+	margin-left: 10px;
 `;
 
 
@@ -113,7 +120,7 @@ class Parent extends React.Component {
 	    return(
 	    	<gridWrap>
 	    		{children}
-				<button type='button' onClick={() => this.storeStuff()}>Submit</button>
+				<Submit type='button' onClick={() => this.storeStuff()}>Submit</Submit>
 			</gridWrap>
 		)
 	} 

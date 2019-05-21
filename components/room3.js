@@ -2,101 +2,101 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Checkbox = styled.input`
-	position:absolute;
-	top:-18px;
-	left:0;
-`;
+	position: absolute;
+	top: -18px;
+	left: 0;
+`; 
+
 const GridItem = styled.div`
 	position: relative;
-	display:inline-block;
+	display: inline-block;
   	}
 `;
 
 const Item = styled.div`	
 	position: relative;
 	display: flex;
-	flex-basis:calc(15% - 4rem);
+	flex-basis: calc(15% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
 	margin: 0 auto;
 	background: white;
-	padding-bottom:11px;
-	padding-left:11px;
-	padding-right:11px;
-	padding-top:11px
+	padding-bottom: 11px;
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-top: 11px
 `;
 
 
 const ItemWrap = styled.div`	
-	margin-left:7px;
-	padding-top:3px;
-	padding-bottom:3px;
+	margin-left: 7px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	padding-left: 3px;
 	padding-right: 3px;
 	background: #EAEAEA;
-	max-width:180px;
-	max-height:200px
+	max-width: 180px;
+	max-height: 200px
 	border-radius: 5px;
 `;
 
 const ItemNay = styled.div`	
 	position: relative;
 	display: flex;
-	flex-basis:calc(15% - 4rem);
+	flex-basis: calc(15% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
 	margin: 0 auto;
 	background: #DADDE8;
-	padding-bottom:11px;
-	padding-left:11px;
-	padding-right:11px;
-	padding-top:11px
+	padding-bottom: 11px;
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-top: 11px
 `;
 
 const ItemWrapNay = styled.div`	
-	margin-left:7px;
-	padding-top:3px;
-	padding-bottom:3px;
+	margin-left: 7px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	padding-left: 3px;
 	padding-right: 3px;
 	background: #C3CAE2;
-	max-width:180px;
-	max-height:200px
+	max-width: 180px;
+	max-height: 200px
 	border-radius: 5px;
 `;
 
 const Box = styled.div`
-	position:relative;
+	position: relative;
 	display: inline-block;
 `;
 
 const Slot = styled.div`
-	margin:7px
+	margin: 7px
 `;
 const Heading2 = styled.span`
-	font-weight:bold;
-	font-size:15px;
-	margin-left:20px;
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 20px;
 `;
 
 const Heading2Nay = styled.span`
-	font-weight:bold;
-	font-size:15px;
-	padding-left:20px;
+	font-weight: bold;
+	font-size: 15px;
+	padding-left: 20px;
 	background: #DADDE8;
 	display: flex;
-	flex-basis:calc(15% - 4rem);
+	flex-basis: calc(15% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
-	border-radius-left:5px;
-	border-radius-right:5px;
+	border-radius-left: 5px;
+	border-radius-right: 5px;
 `;
 
 const P = styled.p`
-	margin:1px 0;
-	font-size:12px;
+	margin: 1px 0;
+	font-size: 12px;
 `;
-
 
 class Room3 extends React.Component{
 
