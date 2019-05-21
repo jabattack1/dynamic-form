@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+const Checkbox = styled.input`
+	position:absolute;
+	top:-18px;
+	left:0;
+`; 
+
 const GridItem = styled.div`
 	position: relative;
 	display:inline-block;
-	margin-left:7px;
-	padding-top:10px;
-	padding-bottom:3px;
-	padding-left: 3px;
-	padding-right: 3px;
-	background: #e2e2e2;
-	max-width:180px;
-	max-height:200px
-	border-radius: 5px;
+  	}
 `;
 
 const Item = styled.div`	
@@ -26,6 +25,46 @@ const Item = styled.div`
 	padding-bottom:11px;
 	padding-left:11px;
 	padding-right:11px;
+	padding-top:11px
+`;
+
+
+const ItemWrap = styled.div`	
+	margin-left:7px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	background: #EAEAEA;
+	max-width:180px;
+	max-height:200px
+	border-radius: 5px;
+`;
+
+const ItemNay = styled.div`	
+	position: relative;
+	display: flex;
+	flex-basis:calc(15% - 4rem);
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin: 0 auto;
+	background: #DADDE8;
+	padding-bottom:11px;
+	padding-left:11px;
+	padding-right:11px;
+	padding-top:11px
+`;
+
+const ItemWrapNay = styled.div`	
+	margin-left:7px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	background: #C3CAE2;
+	max-width:180px;
+	max-height:200px
+	border-radius: 5px;
 `;
 
 const Box = styled.div`
@@ -35,21 +74,30 @@ const Box = styled.div`
 
 const Slot = styled.div`
 	margin:7px
-`
+`;
 const Heading2 = styled.span`
 	font-weight:bold;
 	font-size:15px;
 	margin-left:20px;
-`
-const Lab = styled.label`
-	position:absolute;
-	top:-19px;
-	left:0px;
-`
+`;
+
+const Heading2Nay = styled.span`
+	font-weight:bold;
+	font-size:15px;
+	padding-left:20px;
+	background: #DADDE8;
+	display: flex;
+	flex-basis:calc(15% - 4rem);
+	flex-grow: 1;
+	flex-shrink: 0;
+	border-radius-left:5px;
+	border-radius-right:5px;
+`;
+
 const P = styled.p`
 	margin:1px 0;
 	font-size:12px;
-`
+`;
 
 const Select = styled.select`
 
@@ -79,8 +127,10 @@ class Room2 extends React.Component{
 
 		if(this.state.check===true){
 			select = 
+			<ItemWrap>
+			<Heading2>Room {this.state.room}</Heading2>
 			<Item>
-					<Lab><input type='checkbox' onClick={() => this.getStuff()} checked/></Lab>
+					<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
 				<Slot>
 					<P>Adults</P>
 					<P>(18+)</P>
@@ -103,11 +153,14 @@ class Room2 extends React.Component{
 					</select>
 				</Slot>
 			</Item>
+			</ItemWrap>
 		}
 		else{
 			select = 
-			<Item>
-					<Lab><input type='checkbox' onClick={() => this.getStuff()} /></Lab>
+			<ItemWrapNay>
+			<Heading2Nay>Room {this.state.room}</Heading2Nay>
+			<ItemNay>
+					<Checkbox type='checkbox' onClick={() => this.getStuff()} />
 				<Slot>
 					<P>Adults</P>
 					<P>(18+)</P>
@@ -125,13 +178,14 @@ class Room2 extends React.Component{
 						<option>{2}</option>
 					</select>
 				</Slot>	
-			</Item>
+			</ItemNay>
+			</ItemWrapNay>
 		}
 		
 		return (
+
 			<GridItem>
 				<Box>
-					<Heading2>Room {this.state.room}</Heading2>
 					{select}
 				</Box>
 			</GridItem>

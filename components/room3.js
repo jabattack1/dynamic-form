@@ -1,22 +1,104 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Grid = styled.div`
+const Checkbox = styled.input`
+	position:absolute;
+	top:-18px;
+	left:0;
+`;
+const GridItem = styled.div`
+	position: relative;
 	display:inline-block;
+  	}
+`;
+
+const Item = styled.div`	
+	position: relative;
+	display: flex;
 	flex-basis:calc(15% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
-	margin: 0 2rem 2rem 2rem;
-	padding: 2rem;
-	border: 2px solid black;
-	background: #e2e2e2;
-	box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+	margin: 0 auto;
+	background: white;
+	padding-bottom:11px;
+	padding-left:11px;
+	padding-right:11px;
+	padding-top:11px
+`;
+
+
+const ItemWrap = styled.div`	
+	margin-left:7px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	background: #EAEAEA;
+	max-width:180px;
+	max-height:200px
+	border-radius: 5px;
+`;
+
+const ItemNay = styled.div`	
 	position: relative;
-	max-width:200px;
+	display: flex;
+	flex-basis:calc(15% - 4rem);
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin: 0 auto;
+	background: #DADDE8;
+	padding-bottom:11px;
+	padding-left:11px;
+	padding-right:11px;
+	padding-top:11px
+`;
+
+const ItemWrapNay = styled.div`	
+	margin-left:7px;
+	padding-top:3px;
+	padding-bottom:3px;
+	padding-left: 3px;
+	padding-right: 3px;
+	background: #C3CAE2;
+	max-width:180px;
+	max-height:200px
+	border-radius: 5px;
 `;
 
 const Box = styled.div`
-	width: 150px;
+	position:relative;
+	display: inline-block;
+`;
+
+const Slot = styled.div`
+	margin:7px
+`;
+const Heading2 = styled.span`
+	font-weight:bold;
+	font-size:15px;
+	margin-left:20px;
+`;
+
+const Heading2Nay = styled.span`
+	font-weight:bold;
+	font-size:15px;
+	padding-left:20px;
+	background: #DADDE8;
+	display: flex;
+	flex-basis:calc(15% - 4rem);
+	flex-grow: 1;
+	flex-shrink: 0;
+	border-radius-left:5px;
+	border-radius-right:5px;
+`;
+
+const P = styled.p`
+	margin:1px 0;
+	font-size:12px;
+`;
+
+const Select = styled.select`
+
 `;
 
 class Room3 extends React.Component{
@@ -36,58 +118,74 @@ class Room3 extends React.Component{
 	state = {
 	}
 
-
 	render() {
 		
 		let select = '';
 
 		if(this.state.check===true){
 			select = 
-			<div>
-				<label><input type='checkbox' onClick={() => this.getStuff()} checked/></label>
-				<p>Adults 18+</p>
+			<ItemWrap>
+			<Heading2>Room {this.state.room}</Heading2>
+			<Item>
+					<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+				<Slot>
+					<P>Adults</P>
+					<P>(18+)</P>
 					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
-			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-        })}>
+						this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        			})}>
 						<option>{1}</option>
 						<option>{2}</option>
 					</select>
-				<p>Children 0-17</p>
+				</Slot>
+				<Slot>
+					<P>Children</P>
+					<P>(0-17)</P>
 					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-        })}>
+						this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+        			})}>
 						<option>{0}</option>
 						<option>{1}</option>
 						<option>{2}</option>
 					</select>
-			</div>
+				</Slot>
+			</Item>
+			</ItemWrap>
 		}
 		else{
 			select = 
-			<div>
-				<label><input type='checkbox' onClick={() => this.getStuff()} /></label>
-				<p>Adults 18+</p>
+			<ItemWrapNay>
+			<Heading2Nay>Room {this.state.room}</Heading2Nay>
+			<ItemNay>
+					<Checkbox type='checkbox' onClick={() => this.getStuff()} />
+				<Slot>
+					<P>Adults</P>
+					<P>(18+)</P>
 					<select disabled>
 						<option>{1}</option>
 						<option>{2}</option>
 					</select>
-				<p>Children 0-17</p>
+				</Slot>
+				<Slot>	
+					<P>Children</P>
+					<P>(0-17)</P>
 					<select disabled>
 						<option>{0}</option>
 						<option>{1}</option>
 						<option>{2}</option>
 					</select>
-					
-			</div>
+				</Slot>	
+			</ItemNay>
+			</ItemWrapNay>
 		}
 		
 		return (
-			<Grid>
+
+			<GridItem>
 				<Box>
-					{this.state.room}
 					{select}
 				</Box>
-			</Grid>
+			</GridItem>
 		);
 	}
 
