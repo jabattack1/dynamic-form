@@ -2,8 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Parent from '../components/parent.js';
+import Room1 from '../components/room1.js';
+import Room2 from '../components/room2.js';
+import Room3 from '../components/room3.js';
+import Room4 from '../components/room4.js';
 
-import rooms from '../data/rooms.js';
+import parsedData from '../data/rooms.js';
 
 const Wrap = styled.div`
 	display: flex;
@@ -11,21 +15,18 @@ const Wrap = styled.div`
   	max-width: 1200px;
   	margin: 0 auto;
 `
-const Index = (props) => (
-	<Wrap>
-		<Parent {...props} />
-	</Wrap>
-
-);
 
 
-Index.getInitialProps = async function() {
+class Index extends React.Component {
 
-	const data= {
-		rooms
-	};
+  render () {
+    return(
+    	<Wrap>
+			<Parent {...parsedData} />
+		</Wrap>
+    )
+  }
 
-	return data
 }
 
 export default Index;

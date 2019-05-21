@@ -21,17 +21,11 @@ class Parent extends React.Component {
 
 	render() {
 
-	  	let array = [];
-
 	  	const room1Value = (value) => {
-	  		console.log('room1');
-			console.log(value);
 	    	this.setState({checked:''});
 	  	};
 
 		const room2Value = (value) => {
-			console.log('room2');
-			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room2'});
 	    	}
@@ -41,8 +35,6 @@ class Parent extends React.Component {
 	  	};
 
 		const room3Value = (value) => {
-			console.log('room3');
-			console.log(value);
 			if(value[0] === true){
 	    		this.setState({checked:'room3'});
 	    	}
@@ -55,7 +47,7 @@ class Parent extends React.Component {
 	    	if(value[0] === true){
 	    		this.setState({checked:'room4'});
 	    		this.setState({room4:[{adults: value[2], children: value[3]}]},() => {
-    				console.log(this.state)});
+    			});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
@@ -63,7 +55,7 @@ class Parent extends React.Component {
 	  	};
 
 	  	let children = '';
-
+	  	(console.log(this.state));
 	  	if(this.state.checked === 'room2'){
 	  		children = 
 	  			<div>
@@ -101,7 +93,7 @@ class Parent extends React.Component {
 					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
 				</div>
 	  	}
-	 	
+
 	    return(
 	    	<div>
 	    		{children}
@@ -110,12 +102,16 @@ class Parent extends React.Component {
 		)
 	} 
 
+	componentWillMount(){
+		if(Object.keys(this.props).length > 0){
+			this.setState({checked: 'room4', room4:[{adults: this.props.room4[0].adults, children: this.props.room4[0].children }]},() => {
+    		});
+		}
+	}
 	storeStuff(){
 		console.log('here');
 		let status = this.state
 		localStorage.setItem('submittedData', JSON.stringify(status));
-		var parsedData = JSON.parse(localStorage.getItem('submittedData'));
-		console.log(parsedData);
 	}
 
 }
