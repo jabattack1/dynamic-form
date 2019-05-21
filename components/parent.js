@@ -6,18 +6,33 @@ import Room2 from '../components/room2.js';
 import Room3 from '../components/room3.js';
 import Room4 from '../components/room4.js';
 
+const gridWrap = styled.div`
+	width: calc(100%);
+	font:Verdana;
+`;
+
 
 class Parent extends React.Component {
 
-	state = {
-		checked: '',
-		room4:[
-		    {
-		      adults: '',
-		      children: ''
-		    }
-  		]
+	constructor(props){
+
+	    super(props)
+
+	    this.state = {
+			checked: '',
+			room4:[
+			    {
+			      adults: '',
+			      children: ''
+			    }
+	  		]
+		}
 	}
+
+	state = {
+
+	}
+
 
 	render() {
 
@@ -55,59 +70,61 @@ class Parent extends React.Component {
 	  	};
 
 	  	let children = '';
-	  	(console.log(this.state));
+	  	console.log('dog');
+	  	console.log(this.state);
 	  	if(this.state.checked === 'room2'){
 	  		children = 
-	  			<div>
+	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
 					<Room2  fromChildToParentCallback={room2Value} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} check={false} />
 					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-				</div>
+				</gridWrap>
 	  	}
 	  	else if(this.state.checked === 'room3'){
 	  		children = 
-	  			<div>
+	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
 					<Room2  fromChildToParentCallback={room2Value} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} check={true} />
 					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-				</div>
+				</gridWrap>
 	  	}
 
 	  	else if(this.state.checked === 'room4'){
 	  		children = 
-	  			<div>
+	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
 					<Room2  fromChildToParentCallback={room2Value} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} check={true} />
 					<Room4  fromChildToParentCallback={room4Value} check={true} /> 
-				</div>
+				</gridWrap>
 	  	}
 	  	else{
 	  		children =
-	  			<div>
+	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
 					<Room2  fromChildToParentCallback={room2Value} check={false} />
 					<Room3  fromChildToParentCallback={room3Value} check={false} />
 					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-				</div>
+				</gridWrap>
 	  	}
 
 	    return(
-	    	<div>
+	    	<gridWrap>
 	    		{children}
 				<button type='button' onClick={() => this.storeStuff()}>Submit</button>
-			</div>
+			</gridWrap>
 		)
 	} 
 
-	componentWillMount(){
-		if(Object.keys(this.props).length > 0){
-			this.setState({checked: 'room4', room4:[{adults: this.props.room4[0].adults, children: this.props.room4[0].children }]},() => {
-    		});
-		}
-	}
+	// componentWillMount(){
+	// 	if(Object.keys(this.props).length > 0){
+	// 		this.setState({checked: 'room4', room4:[{adults: this.props.room4[0].adults, children: this.props.room4[0].children }]},() => {
+ //    		});
+	// 	}
+	// }
+
 	storeStuff(){
 		console.log('here');
 		let status = this.state

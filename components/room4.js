@@ -99,6 +99,7 @@ class Room4 extends React.Component{
 	}
 
 	getStuff(){
+		console.log('hello');
 		this.setState({check: !this.state.check, adults: this.state.adults || 1, children:this.state.children}, function () {
 			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
         });

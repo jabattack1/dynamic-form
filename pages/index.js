@@ -19,10 +19,17 @@ const Wrap = styled.div`
 
 class Index extends React.Component {
 
-  render () {
+  // static async getInitialProps () {
+  // 	data = await Component.getInitialProps(parsedData);
+  // 	return data;
+  // }
+
+
+
+  render (props) {
     return(
     	<Wrap>
-			<Parent {...parsedData} />
+			<Parent />
 		</Wrap>
     )
   }
