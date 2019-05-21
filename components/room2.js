@@ -125,7 +125,7 @@ class Room2 extends React.Component{
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
 						<Item>
-								<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>

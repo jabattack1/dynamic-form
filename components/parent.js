@@ -27,6 +27,24 @@ class Parent extends React.Component {
 
 	    this.state = {
 			checked: '',
+			room1:[
+			    {
+			      adults: '',
+			      children: ''
+			    }
+	  		],
+			room2:[
+			    {
+			      adults: '',
+			      children: ''
+			    }
+	  		],
+			room3:[
+			    {
+			      adults: '',
+			      children: ''
+			    }
+	  		],
 			room4:[
 			    {
 			      adults: '',
@@ -44,35 +62,55 @@ class Parent extends React.Component {
 	render() {
 
 	  	const room1Value = (value) => {
-	    	this.setState({checked:''});
+	  		if(value[0] === true && this.state.checked === ''){
+	    		this.setState({checked:''});
+	    	}
+	    	else if(value[0] === false){
+	    		this.setState({checked:''});
+	    	}
+	    	else{
+	    		this.setState({room1:[{adults: value[2], children: value[3]}]},() => {
+    			});	    		
+	    	}
 	  	};
 
 		const room2Value = (value) => {
-			if(value[0] === true){
+			if(value[0] === true && this.state.checked === ''){
+				console.log('wrong');
 	    		this.setState({checked:'room2'});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
 	    	}
+	    	else{
+	    		this.setState({room2:[{adults: value[2], children: value[3]}]},() => {
+    			});	    		
+	    	}
 	  	};
 
 		const room3Value = (value) => {
-			if(value[0] === true){
+			if(value[0] === true && this.state.checked === ''){
 	    		this.setState({checked:'room3'});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
 	    	}
+	    	else{
+	    		this.setState({room3:[{adults: value[2], children: value[3]}]},() => {
+    			});	    		
+	    	}
 	  	};
 
 		const room4Value = (value) => {
-	    	if(value[0] === true){
+	    	if(value[0] === true && this.state.checked === ''){
 	    		this.setState({checked:'room4'});
-	    		this.setState({room4:[{adults: value[2], children: value[3]}]},() => {
-    			});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
+	    	}
+	    	else{
+	    		this.setState({room4:[{adults: value[2], children: value[3]}]},() => {
+    			});	    		
 	    	}
 	  	};
 
@@ -125,15 +163,9 @@ class Parent extends React.Component {
 		)
 	} 
 
-	// componentWillMount(){
-	// 	if(Object.keys(this.props).length > 0){
-	// 		this.setState({checked: 'room4', room4:[{adults: this.props.room4[0].adults, children: this.props.room4[0].children }]},() => {
- //    		});
-	// 	}
-	// }
-
 	storeStuff(){
 		console.log('here');
+		console.log(this.state);
 		let status = this.state
 		localStorage.setItem('submittedData', JSON.stringify(status));
 	}

@@ -125,7 +125,7 @@ class Room4 extends React.Component{
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
 						<Item>
-								<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
@@ -155,7 +155,7 @@ class Room4 extends React.Component{
 				<ItemWrapNay>
 					<Heading2Nay>Room {this.state.room}</Heading2Nay>
 						<ItemNay>
-								<Checkbox type='checkbox' onClick={() => this.getStuff()} />
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} />
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
