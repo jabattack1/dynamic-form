@@ -54,11 +54,18 @@ const P = styled.p`
 
 class Room1 extends React.Component{
 
+	constructor(props) {
+
+	  	super(props);
+
+	  	this.state = {
+			room: 1,
+	    	adults: this.state.adults || 1,
+			children: this.state.children || 0
+	  	};
+	}
+
 	state = {
-		room: 1,
-		adults: 1,
-		children: 0,
-		check: false
 	}
 
 	render() {
@@ -67,29 +74,29 @@ class Room1 extends React.Component{
 		select = 
 			<ItemWrap>
 				<Heading>Room {this.state.room}</Heading>
-				<Item>
-					<Slot>
-						<P>Adults</P> 
-						<P>(18+)</P>
-						<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
-							this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-	        			})}>
-							<option>{1}</option>
-							<option>{2}</option>
-						</select>
-					</Slot>
-					<Slot>
-						<P>Children</P>
-						<P>(0-17)</P>
-						<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-							this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-	        			})}>
-							<option>{0}</option>
-							<option>{1}</option>
-							<option>{2}</option>
-						</select>
-					</Slot>
-				</Item>
+					<Item>
+							<Slot>
+								<P>Adults</P>
+								<P>(18+)</P>
+								<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+			        			})}>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>
+							<Slot>
+								<P>Children</P>
+								<P>(0-17)</P>
+								<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+			        			})}>
+									<option>{0}</option>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>
+					</Item>
 			</ItemWrap>
 
 		return (
@@ -106,7 +113,7 @@ class Room1 extends React.Component{
 	}
 
 	getStuff(){
-		this.setState({check: !this.state.check}, function () {
+		this.setState({adults: this.state.adults || 1, children:this.state.children}, function () {
 			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
         });
 	}
