@@ -122,59 +122,59 @@ class Room4 extends React.Component{
 
 		if(this.state.check===true){
 			select = 
-			<ItemWrap>
-				<Heading2>Room {this.state.room}</Heading2>
-					<Item>
-							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
-						<Slot>
-							<P>Adults</P>
-							<P>(18+)</P>
-							<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
-								this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-		        			})}>
-								<option>{1}</option>
-								<option>{2}</option>
-							</select>
-						</Slot>
-						<Slot>
-							<P>Children</P>
-							<P>(0-17)</P>
-							<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-								this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-		        			})}>
-								<option>{0}</option>
-								<option>{1}</option>
-								<option>{2}</option>
-							</select>
-						</Slot>
-					</Item>
-			</ItemWrap>
+				<ItemWrap>
+					<Heading2>Room {this.state.room}</Heading2>
+						<Item>
+								<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+							<Slot>
+								<P>Adults</P>
+								<P>(18+)</P>
+								<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+			        			})}>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>
+							<Slot>
+								<P>Children</P>
+								<P>(0-17)</P>
+								<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+			        			})}>
+									<option>{0}</option>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>
+						</Item>
+				</ItemWrap>
 		}
 		else{
 			select = 
-			<ItemWrapNay>
-				<Heading2Nay>Room {this.state.room}</Heading2Nay>
-					<ItemNay>
-							<Checkbox type='checkbox' onClick={() => this.getStuff()} />
-						<Slot>
-							<P>Adults</P>
-							<P>(18+)</P>
-							<select disabled>
-								<option>{1}</option>
-								<option>{2}</option>
-							</select>
-						</Slot>
-						<Slot>	
-							<P>Children</P>
-							<P>(0-17)</P>
-							<select disabled>
-								<option>{0}</option>
-								<option>{1}</option>
-								<option>{2}</option>
-							</select>
-						</Slot>	
-					</ItemNay>
-			</ItemWrapNay>
+				<ItemWrapNay>
+					<Heading2Nay>Room {this.state.room}</Heading2Nay>
+						<ItemNay>
+								<Checkbox type='checkbox' onClick={() => this.getStuff()} />
+							<Slot>
+								<P>Adults</P>
+								<P>(18+)</P>
+								<select disabled>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>
+							<Slot>	
+								<P>Children</P>
+								<P>(0-17)</P>
+								<select disabled>
+									<option>{0}</option>
+									<option>{1}</option>
+									<option>{2}</option>
+								</select>
+							</Slot>	
+						</ItemNay>
+				</ItemWrapNay>
 		}
 		
 		return (

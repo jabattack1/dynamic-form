@@ -71,23 +71,23 @@ class Room1 extends React.Component{
 					<Slot>
 						<P>Adults</P> 
 						<P>(18+)</P>
-						<Select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+						<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
 							this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
 	        			})}>
 							<option>{1}</option>
 							<option>{2}</option>
-						</Select>
+						</select>
 					</Slot>
 					<Slot>
 						<P>Children</P>
 						<P>(0-17)</P>
-						<Select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+						<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
 							this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
 	        			})}>
 							<option>{0}</option>
 							<option>{1}</option>
 							<option>{2}</option>
-						</Select>
+						</select>
 					</Slot>
 				</Item>
 			</ItemWrap>
