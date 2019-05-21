@@ -76,7 +76,6 @@ class Parent extends React.Component {
 
 		const room2Value = (value) => {
 			if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
-				console.log('wrong');
 	    		this.setState({checked: parseInt(2)});
 	    	}
 	    	else if(value[0] === false){
@@ -92,6 +91,9 @@ class Parent extends React.Component {
 			if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
 	    		this.setState({checked: parseInt(3)});
 	    	}
+	    	else if(value[0] === false && this.state.checked === value[1]){
+	    		this.setState({checked: parseInt(2)});
+	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
 	    	}
@@ -104,6 +106,9 @@ class Parent extends React.Component {
 		const room4Value = (value) => {
 	    	if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
 	    		this.setState({checked:parseInt(4)});
+	    	}
+	    	else if(value[0] === false && this.state.checked === value[1]){
+	    		this.setState({checked: parseInt(3)});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
