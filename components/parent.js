@@ -75,9 +75,9 @@ class Parent extends React.Component {
 	  	};
 
 		const room2Value = (value) => {
-			if(value[0] === true && this.state.checked === ''){
+			if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
 				console.log('wrong');
-	    		this.setState({checked:'room2'});
+	    		this.setState({checked: parseInt(2)});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
@@ -89,8 +89,8 @@ class Parent extends React.Component {
 	  	};
 
 		const room3Value = (value) => {
-			if(value[0] === true && this.state.checked === ''){
-	    		this.setState({checked:'room3'});
+			if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
+	    		this.setState({checked: parseInt(3)});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
@@ -102,8 +102,8 @@ class Parent extends React.Component {
 	  	};
 
 		const room4Value = (value) => {
-	    	if(value[0] === true && this.state.checked === ''){
-	    		this.setState({checked:'room4'});
+	    	if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
+	    		this.setState({checked:parseInt(4)});
 	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
@@ -117,7 +117,7 @@ class Parent extends React.Component {
 	  	let children = '';
 	  	console.log('dog');
 	  	console.log(this.state);
-	  	if(this.state.checked === 'room2'){
+	  	if(this.state.checked === 2){
 	  		children = 
 	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
@@ -126,7 +126,7 @@ class Parent extends React.Component {
 					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
 				</gridWrap>
 	  	}
-	  	else if(this.state.checked === 'room3'){
+	  	else if(this.state.checked === 3){
 	  		children = 
 	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
@@ -136,7 +136,7 @@ class Parent extends React.Component {
 				</gridWrap>
 	  	}
 
-	  	else if(this.state.checked === 'room4'){
+	  	else if(this.state.checked === 4){
 	  		children = 
 	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} />
