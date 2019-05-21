@@ -94,6 +94,9 @@ class Parent extends React.Component {
 	    	else if(value[0] === false && this.state.checked === value[1]){
 	    		this.setState({checked: parseInt(2)});
 	    	}
+	    	else if(value[0] === false && this.state.checked > value[1]){
+	    		this.setState({checked: parseInt(2)});
+	    	}
 	    	else if(value[0] === false){
 	    		this.setState({checked:''});
 	    	}
