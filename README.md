@@ -1,13 +1,13 @@
 **pages/index.js**<br><br>
-	•	if there is stored data componentDIdMount will fetch local data in localStorage from data/rooms.js.<br>
+	•	componentDIdMount will fetch local data located in localStorage (data/rooms.js).<br>
 	•	parsedData will be passed down to the Parent component through ‘peter’ attribute.<br><br>
 
 **components/parent.js**<br><br>
-	•	if there is data in localStorage state will be updated using its props.<br>
+	•	if there is data in localStorage, state will be updated using its props.<br>
 	•	if the state has a ‘checked’ value, check=true attribute along with a 'child to parent' callback function and data will be passed down to all the child components (room1, room2, room3, room4).<br>
-	•	when submit button is clicked state will be stingified and put into localStorage<br>
+	•	when submit button is clicked state will be stingified and put into localStorage.<br>
 	•	functions room1Value, room2Value, room3Value, room4Value will update the state according to data received back from child components.<br>
-	•	functions room1Value, room2Value, room3Value, room4Value also controls which room will be ‘checked’.<br><br>
+	•	functions room1Value, room2Value, room3Value, room4Value controls which room will be ‘checked’.<br><br>
 
 **components/(room1.js, room2.js, room3.js, room4.js)**<br><br>
 	•	state will be updated if there is data passed down as props<br>
