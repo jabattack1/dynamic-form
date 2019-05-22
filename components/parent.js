@@ -18,6 +18,13 @@ const Submit = styled.button`
 	margin-left: 10px;
 `;
 
+const Clear = styled.button`
+	position: relative;
+	display: flex;
+	margin-top: 30px;
+	margin-left: 10px;
+`;
+
 
 class Parent extends React.Component {
 
@@ -213,6 +220,7 @@ class Parent extends React.Component {
 	    	<gridWrap>
 	    		{children}
 				<Submit type='button' onClick={() => this.storeStuff()}>Submit</Submit>
+				<Clear type='button' onClick={() => this.eraseStuff()}>Clear</Clear>
 			</gridWrap>
 		)
 	} 
@@ -221,6 +229,10 @@ class Parent extends React.Component {
 		let status = this.state
 		console.log(status);
 		localStorage.setItem('submittedData', JSON.stringify(status));
+	}
+
+	eraseStuff(){
+		localStorage.clear();
 	}
 
 }
