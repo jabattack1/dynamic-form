@@ -165,7 +165,6 @@ class Room1 extends React.Component{
 
 	twoCallsAdult = e => {
 		e.persist();
-		console.log(e);
   		this.functionOneAdult(e)
   		this.functionTwoAdult(e)
 	}

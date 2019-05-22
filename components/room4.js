@@ -132,7 +132,7 @@ class Room4 extends React.Component{
 		let optionsChildren = '';
 
 		if(this.props.data !== undefined){
-			if(this.props.data.adults3 === 2){
+			if(this.props.data.adults4 === 2){
 				optionsAdults=
 					<React.Fragment>
 					<option>{1}</option>
@@ -147,7 +147,7 @@ class Room4 extends React.Component{
 					</React.Fragment>
 			}
 
-			if(this.props.data.children3 === 0){
+			if(this.props.data.children4 === 0){
 				optionsChildren =
 					<React.Fragment>
 					<option selected>{0}</option>
@@ -155,7 +155,7 @@ class Room4 extends React.Component{
 					<option>{2}</option>
 					</React.Fragment>
 			}
-			else if(this.props.data.children3 === 1){
+			else if(this.props.data.children4 === 1){
 				optionsChildren =
 					<React.Fragment>
 					<option>{0}</option>
@@ -163,7 +163,7 @@ class Room4 extends React.Component{
 					<option>{2}</option>
 					</React.Fragment>
 			}
-			else if(this.props.data.children3 === 2){
+			else if(this.props.data.children4 === 2){
 				optionsChildren =
 					<React.Fragment>
 					<option>{0}</option>
