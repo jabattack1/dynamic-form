@@ -260,6 +260,7 @@ class Room2 extends React.Component{
 		);
 	}
 
+
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {
     		 if(this.props.data!==undefined){

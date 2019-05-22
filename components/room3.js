@@ -132,44 +132,66 @@ class Room3 extends React.Component{
 
 		if(this.props.data !== undefined){
 			if(this.props.data.adults3 === 2){
-				if (process.browser){
-					document.getElementById('selectionAdults').defaultvalue=2;
-				}
+				optionsAdults=
+					<React.Fragment>
+					<option>{1}</option>
+					<option selected>{2}</option>
+					</React.Fragment>
 			}
 			else{
-				if (process.browser){
-					document.getElementById('selectionAdults').defaultvalue=1;
-				}
+				optionsAdults=
+					<React.Fragment>
+					<option selected>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
 			}
 
 			if(this.props.data.children3 === 0){
-				if (process.browser){
-					document.getElementById('selectionChildren').defaultvalue=0;
-				}
+				optionsChildren =
+					<React.Fragment>
+					<option selected>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
 			}
 			else if(this.props.data.children3 === 1){
-				if (process.browser){
-					document.getElementById('selectionChildren').defaultvalue=1;
-				}
+				optionsChildren =
+					<React.Fragment>
+					<option>{0}</option>
+					<option selected>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
 			}
 			else if(this.props.data.children3 === 2){
-				if (process.browser){
-					document.getElementById('selectionChildren').defaultvalue=2;
-				}
+				optionsChildren =
+					<React.Fragment>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option selected>{2}</option>
+					</React.Fragment>
 			}
 			else{
-				if (process.browser){
-					document.getElementById('selectionChildren').defaultvalue=0;
-				}
+				optionsChildren =
+					<React.Fragment>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
 			}
 		}	
 		else{
-			if (process.browser){
-				document.getElementById('selectionAdults').defaultvalue=0;
-			}
-			if (process.browser){
-				document.getElementById('selectionChildren').defaultvalue=0;
-			}
+				optionsAdults =
+					<React.Fragment>
+					<option>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
+
+				optionsChildren =
+					<React.Fragment>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
+					</React.Fragment>
 		}
 
 		if(this.state.check===true){
@@ -184,8 +206,7 @@ class Room3 extends React.Component{
 								<div>
 								<select id='selectionAdults' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
 								})}>
-								<option>{1}</option>
-								<option>{2}</option>
+								{optionsAdults}
 								</select>
 								</div>
 							</Slot>
@@ -195,9 +216,7 @@ class Room3 extends React.Component{
 								<select id='selectionChildren' onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
 										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
 				        			})}>
-								<option>{0}</option>
-								<option>{1}</option>
-								<option>{2}</option>
+								{optionsChildren}
 								</select>
 							</Slot>
 						</Item>
