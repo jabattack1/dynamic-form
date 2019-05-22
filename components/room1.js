@@ -109,6 +109,17 @@ class Room1 extends React.Component{
 					</div>
 
 			}
+			else {
+				optionsAdults =
+					<div>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+			}
 
 			if(this.props.data.props.peter.children1 === 0){
 				optionsChildren =
@@ -144,6 +155,18 @@ class Room1 extends React.Component{
 					<option>{0}</option>
 					<option>{1}</option>
 					<option selected='selected'>{2}</option>
+					</select>
+					</div>
+			}
+			else{
+				optionsChildren =
+					<div>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
 					</select>
 					</div>
 			}
