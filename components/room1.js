@@ -61,16 +61,17 @@ class Room1 extends React.Component{
 	  	if(this.props.data.peter !== undefined){
 		  	this.state = {
 				room: 1,
-		    	adults: this.props.data.props.peter.adults1,
-				children: this.props.data.props.peter.children1
+		    	adults: this.props.data.adults1,
+				children: this.props.data.children1
 		  	};
 		}
-		else{		  	
+		else{	
+		console.log('tot1');		
 			this.state = {
 				room: 1,
-		    	adults: this.state.adults || 1,
-				children: this.state.children || 0
-		  	};
+			    adults: 1,
+				children: 0
+			};
 		}
 	}
 
@@ -78,16 +79,13 @@ class Room1 extends React.Component{
 	}
 
 	render() {
+		
 		let select = '';
 		let optionsAdults = '';
 		let optionsChildren = '';
-
-		console.log('doctor1');
-		console.log(this.props.data.props.peter);
-		console.log('doctor1');
-
-		if(this.props.data.props.peter !== null){
-			if(this.props.data.props.peter.adults1 === 1){
+		console.log(this.props.data.adults1);
+		if(this.props.data !== null){
+			if(this.props.data.adults1 === 1){
 				optionsAdults =
 					<div>
 					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
@@ -99,7 +97,7 @@ class Room1 extends React.Component{
 					</div>
 
 			}
-			else if(this.props.data.props.peter.adults1 === 2){
+			else if(this.props.data.adults1 === 2){
 				optionsAdults =
 					<div>
 					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
@@ -123,7 +121,7 @@ class Room1 extends React.Component{
 					</div>
 			}
 
-			if(this.props.data.props.peter.children1 === 0){
+			if(this.props.data.children1 === 0){
 				optionsChildren =
 					<div>
 					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
@@ -135,7 +133,7 @@ class Room1 extends React.Component{
 					</select>
 					</div>
 			}
-			else if(this.props.data.props.peter.children1 === 1){
+			else if(this.props.data.children1 === 1){
 				optionsChildren =
 					<div>
 					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
@@ -147,7 +145,7 @@ class Room1 extends React.Component{
 					</select>
 					</div>
 			}
-			else if(this.props.data.props.peter.children1 === 2){
+			else if(this.props.data.children1 === 2){
 				optionsChildren =
 					<div>
 					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
@@ -193,12 +191,13 @@ class Room1 extends React.Component{
 					<option>{2}</option>
 					</select>
 					</div>
-		}		
+		}
 
-		select = 
-			<ItemWrap>
-				<Heading>Room {this.state.room}</Heading>
-					<Item>
+
+			select = 
+				<ItemWrap>
+					<Heading>Room {this.state.room}</Heading>
+						<Item>
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
@@ -209,9 +208,10 @@ class Room1 extends React.Component{
 								<P>(0-17)</P>
 								{optionsChildren}
 							</Slot>
-					</Item>
-			</ItemWrap>
+						</Item>
+				</ItemWrap>
 
+		
 		return (
 			<GridItem>
 				<Box>
@@ -224,6 +224,12 @@ class Room1 extends React.Component{
 
 	componentDidMount(){
 		this.getStuff();
+	}
+
+	componentWillReceiveProps(nextProps) {
+  		if(this.props != nextProps) {
+    		this.setState({check: nextProps.check, adults: this.state.adults, children: this.state.children});
+  		}
 	}
 
 	getStuff(){

@@ -24,9 +24,9 @@ class Parent extends React.Component {
 	constructor(props){
 
 	    super(props)
-
-	    if(this.props.peter !== null){
-			
+	    if(this.props.peter !== null){;
+			console.log('lego');
+			// console.log(this.props.peter);
 			this.state = {
 				checked: this.props.peter.checked,
 				adults1: this.props.peter.adults1,
@@ -122,42 +122,44 @@ class Parent extends React.Component {
 	  	};
 
 	  	let children = '';
+	  	let chips = this.props.peter;
+
 
 	  	if(this.state.checked === 2){
 	  		children = 
 	  			<gridWrap>
-				    <Room1  fromChildToParentCallback={room1Value} data={this} />
-					<Room2  fromChildToParentCallback={room2Value} data={this} check={true} />
-					<Room3  fromChildToParentCallback={room3Value} data={this} check={false} />
-					<Room4  fromChildToParentCallback={room4Value} data={this} check={false} /> 
+				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
+					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} data={chips} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
 				</gridWrap>
 	  	}
 	  	else if(this.state.checked === 3){
 	  		children = 
 	  			<gridWrap>
-				    <Room1  fromChildToParentCallback={room1Value} data={this} />
-					<Room2  fromChildToParentCallback={room2Value} data={this} check={true} />
-					<Room3  fromChildToParentCallback={room3Value} data={this} check={true} />
-					<Room4  fromChildToParentCallback={room4Value} data={this} check={false} /> 
+				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
+					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} data={chips} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
 				</gridWrap>
 	  	}
 
 	  	else if(this.state.checked === 4){
 	  		children = 
 	  			<gridWrap>
-				    <Room1  fromChildToParentCallback={room1Value} data={this} />
-					<Room2  fromChildToParentCallback={room2Value} data={this} check={true} />
-					<Room3  fromChildToParentCallback={room3Value} data={this} check={true} />
-					<Room4  fromChildToParentCallback={room4Value} data={this} check={true} /> 
+				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
+					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} data={chips} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} data={chips} check={true} /> 
 				</gridWrap>
 	  	}
 	  	else{
 	  		children =
 	  			<gridWrap>
-				    <Room1  fromChildToParentCallback={room1Value} data={this} />
-					<Room2  fromChildToParentCallback={room2Value} data={this} check={false} />
-					<Room3  fromChildToParentCallback={room3Value} data={this} check={false} />
-					<Room4  fromChildToParentCallback={room4Value} data={this} check={false} /> 
+				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
+					<Room2  fromChildToParentCallback={room2Value} data={chips} check={false} />
+					<Room3  fromChildToParentCallback={room3Value} data={chips} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
 				</gridWrap>
 	  	}
 

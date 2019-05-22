@@ -3,7 +3,7 @@ let parsedData=''
 
 if(typeof(Storage) !== "undefined"){
    parsedData = JSON.parse(localStorage.getItem('submittedData'));
-localStorage.clear();
+// localStorage.clear();
    // console.log('happy');
 }
 else{
