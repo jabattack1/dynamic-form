@@ -74,8 +74,7 @@ class Room1 extends React.Component{
 		}
 	}
 
-	state = {
-	}
+	state = {}
 
 	render() {
 		
@@ -152,7 +151,6 @@ class Room1 extends React.Component{
 							</Slot>
 						</Item>
 				</ItemWrap>
-
 		
 		return (
 			<GridItem>
@@ -177,11 +175,11 @@ class Room1 extends React.Component{
 	}
 
 	functionTwoAdult(e){
-			e.persist();
-			document.getElementById('selectionAdults').value = parseInt(e.target.value);
-			if(this.props.data!==undefined){
-				this.props.data.adults1 = parseInt(e.target.value);
-			}
+		e.persist();
+		document.getElementById('selectionAdults').value = parseInt(e.target.value);
+		if(this.props.data!==undefined){
+			this.props.data.adults1 = parseInt(e.target.value);
+		}
 	}
 
 	twoCallsChildren = e => {

@@ -121,9 +121,7 @@ class Room4 extends React.Component{
 		}
 	}
 
-	state = {
-	}
-
+	state = {}
 
 	render() {
 
@@ -181,18 +179,18 @@ class Room4 extends React.Component{
 			}
 		}	
 		else{
-				optionsAdults =
-					<React.Fragment>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+			optionsAdults =
+				<React.Fragment>
+				<option>{1}</option>
+				<option>{2}</option>
+				</React.Fragment>
 
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+			optionsChildren =
+				<React.Fragment>
+				<option>{0}</option>
+				<option>{1}</option>
+				<option>{2}</option>
+				</React.Fragment>
 		}
 
 		if(this.state.check===true){

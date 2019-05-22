@@ -16,13 +16,11 @@ const Wrap = styled.div`
   	margin: 0 auto;
 `
 
-
 class Index extends React.Component {
 
 	componentDidMount() {
 		this.data = parsedData;
 	}
-
 
  	render () {
     	return(
@@ -31,7 +29,6 @@ class Index extends React.Component {
 			</Wrap>
     	)
  	 }
-
 }
 
 export default Index;
