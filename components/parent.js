@@ -8,7 +8,7 @@ import Room4 from '../components/room4.js';
 
 const gridWrap = styled.div`
 	width: calc(100%);
-	font: verdana;
+	font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
 `;
 
 const Submit = styled.button`

@@ -215,8 +215,7 @@ class Room2 extends React.Component{
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selection' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-								})}>
+								<select disabled>
 								<option>{1}</option>
 								<option>{2}</option>
 								</select>
