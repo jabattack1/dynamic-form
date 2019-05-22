@@ -25,8 +25,6 @@ class Parent extends React.Component {
 
 	    super(props)
 	    if(this.props.peter !== null){;
-			console.log('lego');
-			// console.log(this.props.peter);
 			let initial = this.props.peter;
 			this.state = {
 				checked: initial.checked,
@@ -221,6 +219,7 @@ class Parent extends React.Component {
 
 	storeStuff(){
 		let status = this.state
+		console.log(status);
 		localStorage.setItem('submittedData', JSON.stringify(status));
 	}
 
