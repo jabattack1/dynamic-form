@@ -27,16 +27,17 @@ class Parent extends React.Component {
 	    if(this.props.peter !== null){;
 			console.log('lego');
 			// console.log(this.props.peter);
+			let initial = this.props.peter;
 			this.state = {
-				checked: this.props.peter.checked,
-				adults1: this.props.peter.adults1,
-				children1: this.props.peter.children1,
-				adults2: this.props.peter.adults2,
-				children2: this.props.peter.children2,
-				adults3: this.props.peter.adults3,
-				children3: this.props.peter.children3,
-				adults4: this.props.peter.adults4,
-				children4: this.props.peter.children4
+				checked: initial.checked,
+				adults1: initial.adults1,
+				children1: initial.children1,
+				adults2: initial.adults2,
+				children2: initial.children2,
+				adults3: initial.adults3,
+				children3: initial.children3,
+				adults4: initial.adults4,
+				children4: initial.children4
 			}
 		}
 		else{
@@ -74,6 +75,9 @@ class Parent extends React.Component {
 	  	};
 
 		const room2Value = (value) => {
+			console.log('valueroom2');
+			console.log(value);
+			console.log('valueroom2');
 			if(value[0] === true && this.state.checked === '' || this.state.checked < value[1]){
 	    		this.setState({checked: parseInt(2)});
 	    	}
@@ -122,10 +126,11 @@ class Parent extends React.Component {
 	  	};
 
 	  	let children = '';
-	  	let chips = this.props.peter;
 
+	  	if(this.props.peter !== null){
 
-	  	if(this.state.checked === 2){
+	  		let chips = this.props.peter;
+	  		if(this.state.checked === 2){
 	  		children = 
 	  			<gridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
@@ -162,6 +167,49 @@ class Parent extends React.Component {
 					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
 				</gridWrap>
 	  	}
+		}
+		else{
+				  	if(this.state.checked === 2){
+	  		children = 
+	  			<gridWrap>
+				    <Room1  fromChildToParentCallback={room1Value} />
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
+				</gridWrap>
+	  	}
+	  	else if(this.state.checked === 3){
+	  		children = 
+	  			<gridWrap>
+				    <Room1  fromChildToParentCallback={room1Value} />
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
+				</gridWrap>
+	  	}
+
+	  	else if(this.state.checked === 4){
+	  		children = 
+	  			<gridWrap>
+				    <Room1  fromChildToParentCallback={room1Value} />
+					<Room2  fromChildToParentCallback={room2Value} check={true} />
+					<Room3  fromChildToParentCallback={room3Value} check={true} />
+					<Room4  fromChildToParentCallback={room4Value} check={true} /> 
+				</gridWrap>
+	  	}
+	  	else{
+
+	  		children =
+	  			<gridWrap>
+				    <Room1  fromChildToParentCallback={room1Value} />
+					<Room2  fromChildToParentCallback={room2Value} check={false} />
+					<Room3  fromChildToParentCallback={room3Value} check={false} />
+					<Room4  fromChildToParentCallback={room4Value} check={false} /> 
+				</gridWrap>
+	  	}
+		}
+
+
 
 	    return(
 	    	<gridWrap>

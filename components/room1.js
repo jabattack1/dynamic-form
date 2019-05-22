@@ -58,7 +58,7 @@ class Room1 extends React.Component{
 
 	  	super(props);
 
-	  	if(this.props.data.peter !== undefined){
+	  	if(this.props.data !== undefined){
 		  	this.state = {
 				room: 1,
 		    	adults: this.props.data.adults1,
@@ -83,8 +83,8 @@ class Room1 extends React.Component{
 		let select = '';
 		let optionsAdults = '';
 		let optionsChildren = '';
-		console.log(this.props.data.adults1);
-		if(this.props.data !== null){
+		
+		if(this.props.data !== undefined){
 			if(this.props.data.adults1 === 1){
 				optionsAdults =
 					<div>
@@ -193,7 +193,7 @@ class Room1 extends React.Component{
 					</div>
 		}
 
-
+		console.log('prep');
 			select = 
 				<ItemWrap>
 					<Heading>Room {this.state.room}</Heading>
@@ -228,13 +228,25 @@ class Room1 extends React.Component{
 
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {
-    		this.setState({check: nextProps.check, adults: this.state.adults, children: this.state.children});
+  			if(this.props.data!==undefined){
+    			this.setState({check: nextProps.check, adults: this.props.data.adults1, children: this.props.data.children1});
+    		}
+    		else{
+    			this.setState({check: nextProps.check, adults: this.state.adults, children: this.state.children});
+    		}
   		}
 	}
 
 	getStuff(){
-		this.setState({adults: this.state.adults || 1, children:this.state.children}, function () {
-			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+		this.setState({check: !this.state.check, adults: this.state.adults || 1, children:this.state.children}, function () {
+			if(this.props.data!==undefined){
+				console.log('titan');
+				this.props.fromChildToParentCallback([this.state.check, this.state.room, this.props.data.adults1, this.props.data.children1]);
+			}
+			else{
+				console.log('eh');
+				this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+			}
         });
 	}
 
