@@ -134,17 +134,16 @@ class Room2 extends React.Component{
 
 		if(this.props.data !== undefined){
 			if(this.props.data.adults2 === 2){
-				console.log('game');
 				optionsAdults=
 					<React.Fragment>
 					<option>{1}</option>
-					<option selected='selected'>{2}</option>
+					<option selected>{2}</option>
 					</React.Fragment>
 			}
 			else{
 				optionsAdults=
 					<React.Fragment>
-					<option selected='selected'>{1}</option>
+					<option selected>{1}</option>
 					<option>{2}</option>
 					</React.Fragment>
 			}
@@ -152,7 +151,7 @@ class Room2 extends React.Component{
 			if(this.props.data.children2 === 0){
 				optionsChildren =
 					<React.Fragment>
-					<option selected='selected'>{0}</option>
+					<option selected>{0}</option>
 					<option>{1}</option>
 					<option>{2}</option>
 					</React.Fragment>
@@ -161,7 +160,7 @@ class Room2 extends React.Component{
 				optionsChildren =
 					<React.Fragment>
 					<option>{0}</option>
-					<option selected='selected'>{1}</option>
+					<option selected>{1}</option>
 					<option>{2}</option>
 					</React.Fragment>
 			}
@@ -170,7 +169,7 @@ class Room2 extends React.Component{
 					<React.Fragment>
 					<option>{0}</option>
 					<option>{1}</option>
-					<option selected='selected'>{2}</option>
+					<option selected>{2}</option>
 					</React.Fragment>
 			}
 			else{
