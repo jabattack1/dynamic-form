@@ -1,3 +1,5 @@
+**DYNAMIC FORM**
+
 **pages/index.js**<br><br>
 	•	componentDIdMount will fetch local data located in localStorage (data/rooms.js).<br>
 	•	parsedData will be passed down to the Parent component through ‘peter’ attribute.<br><br>
