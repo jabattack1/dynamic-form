@@ -26,8 +26,6 @@ class Parent extends React.Component {
 	    super(props)
 
 	    if(this.props.peter !== null){
-	    	console.log('data');
-	    	console.log(this.props.peter);
 			
 			this.state = {
 				checked: this.props.peter.checked,
@@ -62,9 +60,6 @@ class Parent extends React.Component {
 	}
 
 	render() {
-		console.log('muffin');
-		console.log(this.state);
-		console.log('muffin');
 	  	const room1Value = (value) => {
 	  		if(value[0] === true && this.state.checked === ''){
 	    		this.setState({checked:''});
@@ -175,8 +170,6 @@ class Parent extends React.Component {
 	} 
 
 	storeStuff(){
-		console.log('here');
-		console.log(this.state);
 		let status = this.state
 		localStorage.setItem('submittedData', JSON.stringify(status));
 	}

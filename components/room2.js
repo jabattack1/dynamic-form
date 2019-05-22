@@ -107,8 +107,8 @@ class Room2 extends React.Component{
 	  	if(this.props.data.peter !== undefined){
 		  	this.state = {
 				room: 2,
-		    	adults: this.props.data.props.peter.adults1,
-				children: this.props.data.props.peter.children1
+		    	adults: this.props.data.props.peter.adults2,
+				children: this.props.data.props.peter.children2
 		  	};
 		}
 		else{		  	
@@ -129,9 +129,10 @@ class Room2 extends React.Component{
 		let select = '';
 		let optionsAdults = '';
 		let optionsChildren = '';
-
+		console.log('doctor2');
+		console.log(this.props.data.props.peter);
+		console.log('doctor2');
 		if(this.props.data.props.peter !== null){
-			console.log('lion');
 			if(this.props.data.props.peter.adults2 === 1){
 				optionsAdults =
 					<div>
@@ -145,7 +146,6 @@ class Room2 extends React.Component{
 
 			}
 			else if(this.props.data.props.peter.adults2 === 2){
-				console.log('lion2');
 				optionsAdults =
 					<div>
 					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
@@ -194,7 +194,6 @@ class Room2 extends React.Component{
 					</div>
 			}
 			else if(this.props.data.props.peter.children2 === 2){
-				console.log('odd');
 				optionsChildren =
 					<div>
 					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
@@ -220,7 +219,6 @@ class Room2 extends React.Component{
 			}
 		}	
 		else{
-			console.log('trance');
 				optionsAdults =
 					<div>
 					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
