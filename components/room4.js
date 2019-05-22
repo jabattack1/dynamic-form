@@ -133,67 +133,44 @@ class Room4 extends React.Component{
 
 		if(this.props.data !== undefined){
 			if(this.props.data.adults4 === 2){
-				console.log('game');
-				optionsAdults=
-					<React.Fragment>
-					<option>{1}</option>
-					<option selected='selected'>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionAdults').defaultValue=2;
+				}
 			}
 			else{
-				optionsAdults=
-					<React.Fragment>
-					<option selected='selected'>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionAdults').defaultValue=1;
+				}
 			}
 
 			if(this.props.data.children4 === 0){
-				optionsChildren =
-					<React.Fragment>
-					<option selected='selected'>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionChildren').defaultValue=0;
+				}
 			}
 			else if(this.props.data.children4 === 1){
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option selected='selected'>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionChildren').defaultValue=1;
+				}
 			}
 			else if(this.props.data.children4 === 2){
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option selected='selected'>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionChildren').defaultValue=2;
+				}
 			}
 			else{
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+				if (process.browser){
+					document.getElementById('selectionChildren').defaultValue=0;
+				}
 			}
 		}	
 		else{
-				optionsAdults =
-					<React.Fragment>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
-
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
+			if (process.browser){
+				document.getElementById('selectionAdults').defaultValue=0;
+			}
+			if (process.browser){
+				document.getElementById('selectionChildren').defaultValue=0;
+			}
 		}
 
 		if(this.state.check===true){
@@ -206,19 +183,22 @@ class Room4 extends React.Component{
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selection' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+								<select id='selectionAdults' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
 								})}>
-								{optionsAdults}
+								<option>{1}</option>
+								<option>{2}</option>
 								</select>
 								</div>
 							</Slot>
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
-								<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+								<select id='selectionChildren' onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
 										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-				        		})}>
-								{optionsChildren}
+				        			})}>
+								<option>{0}</option>
+								<option>{1}</option>
+								<option>{2}</option>
 								</select>
 							</Slot>
 						</Item>
