@@ -65,8 +65,7 @@ class Room1 extends React.Component{
 				children: this.props.data.children1
 		  	};
 		}
-		else{	
-		console.log('tot1');		
+		else{			
 			this.state = {
 				room: 1,
 			    adults: 1,
@@ -83,47 +82,48 @@ class Room1 extends React.Component{
 		let select = '';
 		let optionsAdults = '';
 		let optionsChildren = '';
-
 		
 		if(this.props.data !== undefined){
 			if(this.props.data.adults1 === 2){
 				if (process.browser){
-					document.getElementById('selectionAdults').defaultValue=2;
-				}
+					document.getElementById('selectionAdults').value=2;
+				}	
 			}
 			else{
 				if (process.browser){
-					document.getElementById('selectionAdults').defaultValue=1;
+					document.getElementById('selectionAdults').value=1;
 				}
 			}
 
 			if(this.props.data.children1 === 0){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=0;
+					document.getElementById('selectionChildren').value=0;
 				}
 			}
 			else if(this.props.data.children1 === 1){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=1;
+					document.getElementById('selectionChildren').value=1;
 				}
 			}
 			else if(this.props.data.children1 === 2){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=2;
+					document.getElementById('selectionChildren').value=2;
 				}
 			}
 			else{
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=0;
+					document.getElementById('selectionChildren').value=0;
 				}
 			}
 		}	
+
 		else{
+
 			if (process.browser){
-				document.getElementById('selectionAdults').defaultValue=0;
+				document.getElementById('selectionAdults').value= document.getElementById('selectionAdults').value;
 			}
 			if (process.browser){
-				document.getElementById('selectionChildren').defaultValue=0;
+				document.getElementById('selectionChildren').value= document.getElementById('selectionChildren').value;
 			}
 		}
 
@@ -135,8 +135,7 @@ class Room1 extends React.Component{
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selectionAdults' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-								})}>
+								<select id='selectionAdults' onChange={this.twoCallsAdult}>
 								<option>{1}</option>
 								<option>{2}</option>
 								</select>
@@ -145,9 +144,7 @@ class Room1 extends React.Component{
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
-								<select id='selectionChildren' onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-				        			})}>
+								<select id='selectionChildren' onChange={this.twoCallsChildren}>
 								<option>{0}</option>
 								<option>{1}</option>
 								<option>{2}</option>
@@ -166,6 +163,50 @@ class Room1 extends React.Component{
 		);
 	}
 
+	twoCallsAdult = e => {
+		e.persist();
+		console.log(e);
+  		this.functionOneAdult(e)
+  		this.functionTwoAdult(e)
+	}
+
+	functionOneAdult(e){
+		e.persist();
+		this.setState({adults: parseInt(e.target.value)}, function (){
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+		})
+	}
+
+	functionTwoAdult(e){
+			e.persist();
+			document.getElementById('selectionAdults').value = parseInt(e.target.value);
+			if(this.props.data!==undefined){
+				this.props.data.adults1 = parseInt(e.target.value);
+			}
+	}
+
+	twoCallsChildren = e => {
+		e.persist();
+  		this.functionOneChildren(e)
+  		this.functionTwoChildren(e)
+	}
+
+	functionOneChildren(e){
+		e.persist();
+		this.setState({children: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+		})
+	}
+
+	functionTwoChildren(e){
+		e.persist();
+		if (process.browser){
+			document.getElementById('selectionChildren').value = parseInt(e.target.value);
+			if(this.props.data!==undefined){
+				this.props.data.children1 = parseInt(e.target.value);
+			}
+		}
+	}
 
 	componentDidMount(){
 		this.getStuff();

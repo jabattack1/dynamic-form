@@ -42,14 +42,14 @@ class Parent extends React.Component {
 			console.log('not');
 			this.state = {
 				checked: '',
-				adults1: '',
-				children1: '',
-				adults2: '',
-				children2: '',
-				adults3: '',
-				children3: '',
-				adults4: '',
-				children4: ''
+				adults1: 1,
+				children1: 0,
+				adults2: 1,
+				children2: 0,
+				adults3: 1,
+				children3: 0,
+				adults4: 1,
+				children4: 0
 			}
 		}	   
 	}

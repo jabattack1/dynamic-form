@@ -134,42 +134,42 @@ class Room4 extends React.Component{
 		if(this.props.data !== undefined){
 			if(this.props.data.adults4 === 2){
 				if (process.browser){
-					document.getElementById('selectionAdults').defaultValue=2;
+					document.getElementById('selectionAdults').defaultvalue=2;
 				}
 			}
 			else{
 				if (process.browser){
-					document.getElementById('selectionAdults').defaultValue=1;
+					document.getElementById('selectionAdults').defaultvalue=1;
 				}
 			}
 
 			if(this.props.data.children4 === 0){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=0;
+					document.getElementById('selectionChildren').defaultvalue=0;
 				}
 			}
 			else if(this.props.data.children4 === 1){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=1;
+					document.getElementById('selectionChildren').defaultvalue=1;
 				}
 			}
 			else if(this.props.data.children4 === 2){
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=2;
+					document.getElementById('selectionChildren').defaultvalue=2;
 				}
 			}
 			else{
 				if (process.browser){
-					document.getElementById('selectionChildren').defaultValue=0;
+					document.getElementById('selectionChildren').defaultvalue=0;
 				}
 			}
 		}	
 		else{
 			if (process.browser){
-				document.getElementById('selectionAdults').defaultValue=0;
+				document.getElementById('selectionAdults').defaultvalue=0;
 			}
 			if (process.browser){
-				document.getElementById('selectionChildren').defaultValue=0;
+				document.getElementById('selectionChildren').defaultvalue=0;
 			}
 		}
 
@@ -178,7 +178,7 @@ class Room4 extends React.Component{
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
 						<Item>
-							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+						<Checkbox type='checkbox' onClick={() => this.getStuff()} />
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
