@@ -104,12 +104,20 @@ class Room3 extends React.Component{
 
 	  	super(props);
 
-	  	this.state = {
-	    	check: this.props.check,
-			room: 3,
-	    	adults: this.state.adults || 0,
-			children: this.state.children || 0
-	  	};
+	  	if(this.props.data.peter !== undefined){
+		  	this.state = {
+				room: 3,
+		    	adults: this.props.data.props.peter.adults1,
+				children: this.props.data.props.peter.children1
+		  	};
+		}
+		else{		  	
+			this.state = {
+				room: 3,
+		    	adults: this.state.adults || 1,
+				children: this.state.children || 0
+		  	};
+		}
 	}
 
 	state = {
@@ -118,6 +126,98 @@ class Room3 extends React.Component{
 	render() {
 		
 		let select = '';
+		let optionsAdults = '';
+		let optionsChildren = '';
+
+		if(this.props.data.props.peter !== null){
+			console.log('lion');
+			if(this.props.data.props.peter.adults1 === 1){
+				optionsAdults =
+					<div>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option selected='selected'>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+
+			}
+			else if(this.props.data.props.peter.adults1 === 2){
+				console.log('lion2');
+				optionsAdults =
+					<div>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{1}</option>
+					<option selected='selected'>{2}</option>
+					</select>
+					</div>
+
+			}
+
+			if(this.props.data.props.peter.children1 === 0){
+				optionsChildren =
+					<div>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option selected='selected'>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+			}
+			else if(this.props.data.props.peter.children1 === 1){
+				optionsChildren =
+					<div>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{0}</option>
+					<option selected='selected'>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+			}
+			else if(this.props.data.props.peter.children1 === 2){
+				console.log('odd');
+				optionsChildren =
+					<div>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option selected='selected'>{2}</option>
+					</select>
+					</div>
+			}
+		}	
+		else{
+			console.log('trance');
+				optionsAdults =
+					<div>
+					<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+
+				optionsChildren =
+					<div>
+					<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
+										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+				        			})}>
+					<option>{0}</option>
+					<option>{1}</option>
+					<option>{2}</option>
+					</select>
+					</div>
+		}
 
 		if(this.state.check===true){
 			select = 
@@ -128,23 +228,12 @@ class Room3 extends React.Component{
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
-								<select onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {
-									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-			        			})}>
-									<option>{1}</option>
-									<option>{2}</option>
-								</select>
+								{optionsAdults}
 							</Slot>
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
-								<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-									this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-			        			})}>
-									<option>{0}</option>
-									<option>{1}</option>
-									<option>{2}</option>
-								</select>
+								{optionsChildren}
 							</Slot>
 						</Item>
 				</ItemWrap>
