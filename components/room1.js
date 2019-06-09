@@ -83,51 +83,34 @@ class Room1 extends React.Component{
 		let optionsChildren = '';
 		
 		if(this.props.data !== undefined){
-			if(this.props.data.adults1 === 2){
-				if (process.browser){
-					document.getElementById('selectionAdults').value=2;
-				}	
-			}
-			else{
-				if (process.browser){
-					document.getElementById('selectionAdults').value=1;
-				}
-			}
-
-			if(this.props.data.children1 === 0){
-				if (process.browser){
-					document.getElementById('selectionChildren').value=0;
-				}
-			}
-			else if(this.props.data.children1 === 1){
-				if (process.browser){
-					document.getElementById('selectionChildren').value=1;
-				}
-			}
-			else if(this.props.data.children1 === 2){
-				if (process.browser){
-					document.getElementById('selectionChildren').value=2;
-				}
-			}
-			else{
-				if (process.browser){
-					document.getElementById('selectionChildren').value=0;
-				}
-			}
-		}	
-
-		else{
-
-			if (process.browser){
-				document.getElementById('selectionAdults').value= document.getElementById('selectionAdults').value;
-			}
-			if (process.browser){
-				document.getElementById('selectionChildren').value= document.getElementById('selectionChildren').value;
-			}
-		}
-
 			select = 
 				<ItemWrap>
+					<Heading>Room {this.state.room}</Heading>
+						<Item>
+							<Slot>
+								<P>Adults</P>
+								<P>(18+)</P>
+								<div>
+								<select id='selectionAdults' value={this.props.data.adults1} onChange={this.twoCallsAdult}>
+								<option>{1}</option>
+								<option>{2}</option>
+								</select>
+								</div>
+							</Slot>
+							<Slot>
+								<P>Children</P>
+								<P>(0-17)</P>
+								<select id='selectionChildren' value={this.props.data.children1} onChange={this.twoCallsChildren}>
+								<option>{0}</option>
+								<option>{1}</option>
+								<option>{2}</option>
+								</select>
+							</Slot>
+						</Item>
+				</ItemWrap>
+		}
+		else{
+			<ItemWrap>
 					<Heading>Room {this.state.room}</Heading>
 						<Item>
 							<Slot>
@@ -151,7 +134,8 @@ class Room1 extends React.Component{
 							</Slot>
 						</Item>
 				</ItemWrap>
-		
+
+		}
 		return (
 			<GridItem>
 				<Box>
@@ -237,3 +221,6 @@ class Room1 extends React.Component{
 
 
 export default Room1;
+
+
+

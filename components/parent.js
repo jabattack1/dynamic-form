@@ -135,6 +135,7 @@ class Parent extends React.Component {
 	  	if(this.props.peter !== null){
 
 	  		let chips = this.props.peter;
+	  		console.log(this.state.checked);
 
 	  		if(this.state.checked === 2){
 	  		children = 

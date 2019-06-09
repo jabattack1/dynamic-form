@@ -214,12 +214,13 @@ function (_React$Component) {
 
       if (this.props.peter !== null) {
         var chips = this.props.peter;
+        console.log(this.state.checked);
 
         if (this.state.checked === 2) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 141
+              lineNumber: 142
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -227,7 +228,7 @@ function (_React$Component) {
             data: chips,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 142
+              lineNumber: 143
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -236,20 +237,11 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 143
+              lineNumber: 144
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
             fromChildToParentCallback: room3Value,
-            data: chips,
-            check: false,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 144
-            },
-            __self: this
-          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
-            fromChildToParentCallback: room4Value,
             data: chips,
             check: false,
             __source: {
@@ -257,12 +249,21 @@ function (_React$Component) {
               lineNumber: 145
             },
             __self: this
+          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            fromChildToParentCallback: room4Value,
+            data: chips,
+            check: false,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 146
+            },
+            __self: this
           }));
         } else if (this.state.checked === 3) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 150
+              lineNumber: 151
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -270,20 +271,11 @@ function (_React$Component) {
             data: chips,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 151
+              lineNumber: 152
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
             fromChildToParentCallback: room2Value,
-            data: chips,
-            check: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 152
-            },
-            __self: this
-          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            fromChildToParentCallback: room3Value,
             data: chips,
             check: true,
             __source: {
@@ -291,13 +283,22 @@ function (_React$Component) {
               lineNumber: 153
             },
             __self: this
+          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            fromChildToParentCallback: room3Value,
+            data: chips,
+            check: true,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 154
+            },
+            __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
             fromChildToParentCallback: room4Value,
             data: chips,
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 154
+              lineNumber: 155
             },
             __self: this
           }));
@@ -305,7 +306,7 @@ function (_React$Component) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 160
+              lineNumber: 161
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -313,20 +314,11 @@ function (_React$Component) {
             data: chips,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 161
+              lineNumber: 162
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
             fromChildToParentCallback: room2Value,
-            data: chips,
-            check: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 162
-            },
-            __self: this
-          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
-            fromChildToParentCallback: room3Value,
             data: chips,
             check: true,
             __source: {
@@ -334,8 +326,8 @@ function (_React$Component) {
               lineNumber: 163
             },
             __self: this
-          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
-            fromChildToParentCallback: room4Value,
+          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
+            fromChildToParentCallback: room3Value,
             data: chips,
             check: true,
             __source: {
@@ -343,12 +335,21 @@ function (_React$Component) {
               lineNumber: 164
             },
             __self: this
+          }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
+            fromChildToParentCallback: room4Value,
+            data: chips,
+            check: true,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 165
+            },
+            __self: this
           }));
         } else {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 169
+              lineNumber: 170
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -356,7 +357,7 @@ function (_React$Component) {
             data: chips,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 170
+              lineNumber: 171
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -365,7 +366,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 171
+              lineNumber: 172
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -374,7 +375,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 172
+              lineNumber: 173
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -383,7 +384,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 173
+              lineNumber: 174
             },
             __self: this
           }));
@@ -393,14 +394,14 @@ function (_React$Component) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 180
+              lineNumber: 181
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
             fromChildToParentCallback: room1Value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 181
+              lineNumber: 182
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -408,7 +409,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 182
+              lineNumber: 183
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -416,7 +417,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 183
+              lineNumber: 184
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -424,7 +425,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 184
+              lineNumber: 185
             },
             __self: this
           }));
@@ -432,14 +433,14 @@ function (_React$Component) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 189
+              lineNumber: 190
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
             fromChildToParentCallback: room1Value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 190
+              lineNumber: 191
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -447,7 +448,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 191
+              lineNumber: 192
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -455,7 +456,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 192
+              lineNumber: 193
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -463,7 +464,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 193
+              lineNumber: 194
             },
             __self: this
           }));
@@ -471,14 +472,14 @@ function (_React$Component) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 199
+              lineNumber: 200
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
             fromChildToParentCallback: room1Value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 200
+              lineNumber: 201
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -486,7 +487,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 201
+              lineNumber: 202
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -494,7 +495,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 202
+              lineNumber: 203
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -502,7 +503,7 @@ function (_React$Component) {
             check: true,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 203
+              lineNumber: 204
             },
             __self: this
           }));
@@ -510,14 +511,14 @@ function (_React$Component) {
           children = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 209
+              lineNumber: 210
             },
             __self: this
           }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room1_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
             fromChildToParentCallback: room1Value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 210
+              lineNumber: 211
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room2_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -525,7 +526,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 211
+              lineNumber: 212
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room3_js__WEBPACK_IMPORTED_MODULE_14__["default"], {
@@ -533,7 +534,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 212
+              lineNumber: 213
             },
             __self: this
           }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_room4_js__WEBPACK_IMPORTED_MODULE_15__["default"], {
@@ -541,7 +542,7 @@ function (_React$Component) {
             check: false,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 213
+              lineNumber: 214
             },
             __self: this
           }));
@@ -551,7 +552,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("gridWrap", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 220
+          lineNumber: 221
         },
         __self: this
       }, children, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Submit, {
@@ -561,7 +562,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 222
+          lineNumber: 223
         },
         __self: this
       }, "Submit"), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(Clear, {
@@ -571,7 +572,7 @@ function (_React$Component) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 223
+          lineNumber: 224
         },
         __self: this
       }, "Clear"));
@@ -764,160 +765,235 @@ function (_React$Component) {
       var optionsChildren = '';
 
       if (this.props.data !== undefined) {
-        if (this.props.data.adults1 === 2) {
-          if (true) {
-            document.getElementById('selectionAdults').value = 2;
-          }
-        } else {
-          if (true) {
-            document.getElementById('selectionAdults').value = 1;
-          }
-        }
-
-        if (this.props.data.children1 === 0) {
-          if (true) {
-            document.getElementById('selectionChildren').value = 0;
-          }
-        } else if (this.props.data.children1 === 1) {
-          if (true) {
-            document.getElementById('selectionChildren').value = 1;
-          }
-        } else if (this.props.data.children1 === 2) {
-          if (true) {
-            document.getElementById('selectionChildren').value = 2;
-          }
-        } else {
-          if (true) {
-            document.getElementById('selectionChildren').value = 0;
-          }
-        }
+        select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 87
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 88
+          },
+          __self: this
+        }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 89
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 91
+          },
+          __self: this
+        }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 92
+          },
+          __self: this
+        }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 93
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+          id: "selectionAdults",
+          value: this.props.data.adults1,
+          onChange: this.twoCallsAdult,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96
+          },
+          __self: this
+        }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 100
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101
+          },
+          __self: this
+        }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 102
+          },
+          __self: this
+        }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+          id: "selectionChildren",
+          value: this.props.data.children1,
+          onChange: this.twoCallsChildren,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 103
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104
+          },
+          __self: this
+        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 105
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 106
+          },
+          __self: this
+        }, 2)))));
       } else {
-        if (true) {
-          document.getElementById('selectionAdults').value = document.getElementById('selectionAdults').value;
-        }
-
-        if (true) {
-          document.getElementById('selectionChildren').value = document.getElementById('selectionChildren').value;
-        }
+        react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 113
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 114
+          },
+          __self: this
+        }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 115
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 116
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 117
+          },
+          __self: this
+        }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 118
+          },
+          __self: this
+        }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 119
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+          id: "selectionAdults",
+          onChange: this.twoCallsAdult,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 120
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 121
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 122
+          },
+          __self: this
+        }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 126
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 127
+          },
+          __self: this
+        }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128
+          },
+          __self: this
+        }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
+          id: "selectionChildren",
+          onChange: this.twoCallsChildren,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 129
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130
+          },
+          __self: this
+        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 132
+          },
+          __self: this
+        }, 2)))));
       }
 
-      select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 130
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 131
-        },
-        __self: this
-      }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 132
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 133
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 134
-        },
-        __self: this
-      }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 135
-        },
-        __self: this
-      }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 136
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-        id: "selectionAdults",
-        onChange: this.twoCallsAdult,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 137
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 138
-        },
-        __self: this
-      }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 139
-        },
-        __self: this
-      }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 143
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 144
-        },
-        __self: this
-      }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 145
-        },
-        __self: this
-      }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-        id: "selectionChildren",
-        onChange: this.twoCallsChildren,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 146
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 147
-        },
-        __self: this
-      }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 148
-        },
-        __self: this
-      }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 149
-        },
-        __self: this
-      }, 2)))));
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(GridItem, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156
+          lineNumber: 140
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Box, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 141
         },
         __self: this
       }, select));
@@ -1186,6 +1262,22 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {});
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsAdult2", function (e) {
+      e.persist();
+
+      _this.functionOneAdult2(e);
+
+      _this.functionTwoAdult2(e);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsChildren2", function (e) {
+      e.persist();
+
+      _this.functionOneChildren2(e);
+
+      _this.functionTwoChildren2(e);
+    });
+
     if (_this.props.data !== undefined) {
       _this.state = {
         room: 2,
@@ -1213,223 +1305,24 @@ function (_React$Component) {
       var optionsAdults = '';
       var optionsChildren = '';
 
-      if (this.props.data !== undefined) {
-        if (this.props.data.adults2 === 2) {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 136
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 137
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 138
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 144
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 145
-            },
-            __self: this
-          }, 2));
-        }
-
-        if (this.props.data.children2 === 0) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 151
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 152
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 153
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 154
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children2 === 1) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 159
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 160
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 161
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 162
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children2 === 2) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 167
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 168
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 169
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 170
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 175
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 176
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 177
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 178
-            },
-            __self: this
-          }, 2));
-        }
-      } else {
-        optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 184
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 185
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 186
-          },
-          __self: this
-        }, 2));
-        optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 190
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 191
-          },
-          __self: this
-        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 192
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 193
-          },
-          __self: this
-        }, 2));
-      }
-
       if (this.state.check === true) {
+        console.log('true');
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199
+            lineNumber: 135
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200
+            lineNumber: 136
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 201
+            lineNumber: 137
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -1440,96 +1333,117 @@ function (_React$Component) {
           checked: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202
+            lineNumber: 138
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 139
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 204
+            lineNumber: 140
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205
+            lineNumber: 141
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 206
+            lineNumber: 142
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          id: "selection",
-          onChange: function onChange(e) {
-            return _this2.setState({
-              adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionAdults2",
+          value: this.props.data.adults2,
+          onChange: this.twoCallsAdult2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 207
+            lineNumber: 143
           },
           __self: this
-        }, optionsAdults))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 213
+            lineNumber: 144
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 145
+          },
+          __self: this
+        }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 149
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214
+            lineNumber: 150
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 215
+            lineNumber: 151
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          onChange: function onChange(e) {
-            return _this2.setState({
-              children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionChildren2",
+          value: this.props.data.children2,
+          onChange: this.twoCallsChildren2,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 216
+            lineNumber: 152
           },
           __self: this
-        }, optionsChildren))));
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 153
+          },
+          __self: this
+        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 155
+          },
+          __self: this
+        }, 2)))));
       } else {
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrapNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227
+            lineNumber: 163
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2Nay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228
+            lineNumber: 164
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 165
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -1539,87 +1453,87 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 230
+            lineNumber: 166
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231
+            lineNumber: 168
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232
+            lineNumber: 169
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 233
+            lineNumber: 170
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 234
+            lineNumber: 172
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 235
+            lineNumber: 173
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 236
+            lineNumber: 174
           },
           __self: this
         }, 2))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 239
+            lineNumber: 178
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 240
+            lineNumber: 179
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 241
+            lineNumber: 180
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 242
+            lineNumber: 181
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 243
+            lineNumber: 182
           },
           __self: this
         }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 244
+            lineNumber: 183
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 245
+            lineNumber: 184
           },
           __self: this
         }, 2)))));
@@ -1628,16 +1542,59 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(GridItem, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 193
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Box, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 194
         },
         __self: this
       }, select));
+    }
+  }, {
+    key: "functionOneAdult2",
+    value: function functionOneAdult2(e) {
+      e.persist();
+      this.setState({
+        adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoAdult2",
+    value: function functionTwoAdult2(e) {
+      e.persist();
+      document.getElementById('selectionAdults2').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+      if (this.props.data !== undefined) {
+        this.props.data.adults2 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+      }
+    }
+  }, {
+    key: "functionOneChildren2",
+    value: function functionOneChildren2(e) {
+      e.persist();
+      this.setState({
+        children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoChildren2",
+    value: function functionTwoChildren2(e) {
+      e.persist();
+
+      if (true) {
+        document.getElementById('selectionChildren2').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+        if (this.props.data !== undefined) {
+          this.props.data.children2 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+        }
+      }
     }
   }, {
     key: "componentWillReceiveProps",
@@ -1853,6 +1810,22 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {});
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsAdult3", function (e) {
+      e.persist();
+
+      _this.functionOneAdult3(e);
+
+      _this.functionTwoAdult3(e);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsChildren3", function (e) {
+      e.persist();
+
+      _this.functionOneChildren3(e);
+
+      _this.functionTwoChildren3(e);
+    });
+
     if (_this.props.data !== undefined) {
       _this.state = {
         room: 3,
@@ -1880,223 +1853,24 @@ function (_React$Component) {
       var optionsAdults = '';
       var optionsChildren = '';
 
-      if (this.props.data !== undefined) {
-        if (this.props.data.adults3 === 2) {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 135
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 136
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 137
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 142
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 144
-            },
-            __self: this
-          }, 2));
-        }
-
-        if (this.props.data.children3 === 0) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 150
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 151
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 152
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 153
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children3 === 1) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 158
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 159
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 160
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 161
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children3 === 2) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 166
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 167
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 168
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 169
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 174
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 175
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 176
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 177
-            },
-            __self: this
-          }, 2));
-        }
-      } else {
-        optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 183
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 184
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 185
-          },
-          __self: this
-        }, 2));
-        optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 189
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 190
-          },
-          __self: this
-        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 191
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 192
-          },
-          __self: this
-        }, 2));
-      }
-
       if (this.state.check === true) {
+        // if(this.props.data !== undefined){
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198
+            lineNumber: 134
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199
+            lineNumber: 135
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200
+            lineNumber: 136
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -2107,97 +1881,117 @@ function (_React$Component) {
           checked: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 201
+            lineNumber: 137
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202
+            lineNumber: 138
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 139
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 204
+            lineNumber: 140
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205
+            lineNumber: 141
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          id: "selectionAdults",
-          onChange: function onChange(e) {
-            return _this2.setState({
-              adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionAdults3",
+          value: this.props.data.adults3,
+          onChange: this.twoCallsAdult3,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 206
+            lineNumber: 142
           },
           __self: this
-        }, optionsAdults))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 212
+            lineNumber: 143
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 144
+          },
+          __self: this
+        }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 148
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 213
+            lineNumber: 149
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214
+            lineNumber: 150
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          id: "selectionChildren",
-          onChange: function onChange(e) {
-            return _this2.setState({
-              children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionChildren3",
+          value: this.props.data.children3,
+          onChange: this.twoCallsChildren3,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 215
+            lineNumber: 151
           },
           __self: this
-        }, optionsChildren))));
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 152
+          },
+          __self: this
+        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 153
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154
+          },
+          __self: this
+        }, 2)))));
       } else {
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrapNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226
+            lineNumber: 162
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2Nay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227
+            lineNumber: 163
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228
+            lineNumber: 164
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -2207,87 +2001,87 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 165
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 230
+            lineNumber: 166
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231
+            lineNumber: 167
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232
+            lineNumber: 168
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 233
+            lineNumber: 169
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 234
+            lineNumber: 170
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 235
+            lineNumber: 171
           },
           __self: this
         }, 2))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 238
+            lineNumber: 174
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 239
+            lineNumber: 175
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 240
+            lineNumber: 176
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 241
+            lineNumber: 177
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 242
+            lineNumber: 178
           },
           __self: this
         }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 243
+            lineNumber: 179
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 244
+            lineNumber: 180
           },
           __self: this
         }, 2)))));
@@ -2296,16 +2090,59 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(GridItem, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 188
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Box, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 189
         },
         __self: this
       }, select));
+    }
+  }, {
+    key: "functionOneAdult3",
+    value: function functionOneAdult3(e) {
+      e.persist();
+      this.setState({
+        adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoAdult3",
+    value: function functionTwoAdult3(e) {
+      e.persist();
+      document.getElementById('selectionAdults3').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+      if (this.props.data !== undefined) {
+        this.props.data.adults3 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+      }
+    }
+  }, {
+    key: "functionOneChildren3",
+    value: function functionOneChildren3(e) {
+      e.persist();
+      this.setState({
+        children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoChildren3",
+    value: function functionTwoChildren3(e) {
+      e.persist();
+
+      if (true) {
+        document.getElementById('selectionChildren3').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+        if (this.props.data !== undefined) {
+          this.props.data.children3 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+        }
+      }
     }
   }, {
     key: "componentWillReceiveProps",
@@ -2521,6 +2358,22 @@ function (_React$Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "state", {});
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsAdult4", function (e) {
+      e.persist();
+
+      _this.functionOneAdult4(e);
+
+      _this.functionTwoAdult4(e);
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this), "twoCallsChildren4", function (e) {
+      e.persist();
+
+      _this.functionOneChildren4(e);
+
+      _this.functionTwoChildren4(e);
+    });
+
     if (_this.props.data !== undefined) {
       _this.state = {
         room: 4,
@@ -2548,223 +2401,24 @@ function (_React$Component) {
       var optionsAdults = '';
       var optionsChildren = '';
 
-      if (this.props.data !== undefined) {
-        if (this.props.data.adults4 === 2) {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 135
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 136
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 137
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 142
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 143
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 144
-            },
-            __self: this
-          }, 2));
-        }
-
-        if (this.props.data.children4 === 0) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 150
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 151
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 152
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 153
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children4 === 1) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 158
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 159
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 160
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 161
-            },
-            __self: this
-          }, 2));
-        } else if (this.props.data.children4 === 2) {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 166
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 167
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 168
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            selected: true,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 169
-            },
-            __self: this
-          }, 2));
-        } else {
-          optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 174
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 175
-            },
-            __self: this
-          }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 176
-            },
-            __self: this
-          }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 177
-            },
-            __self: this
-          }, 2));
-        }
-      } else {
-        optionsAdults = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 183
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 184
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 185
-          },
-          __self: this
-        }, 2));
-        optionsChildren = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 189
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 190
-          },
-          __self: this
-        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 191
-          },
-          __self: this
-        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 192
-          },
-          __self: this
-        }, 2));
-      }
-
       if (this.state.check === true) {
+        // if(this.props.data !== undefined){
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrap, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 198
+            lineNumber: 135
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199
+            lineNumber: 136
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Item, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 200
+            lineNumber: 137
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -2775,96 +2429,117 @@ function (_React$Component) {
           checked: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 201
+            lineNumber: 138
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202
+            lineNumber: 139
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203
+            lineNumber: 140
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 204
+            lineNumber: 141
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205
+            lineNumber: 142
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          id: "selection",
-          onChange: function onChange(e) {
-            return _this2.setState({
-              adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionAdults4",
+          value: this.props.data.adults3,
+          onChange: this.twoCallsAdult4,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 206
+            lineNumber: 143
           },
           __self: this
-        }, optionsAdults))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 212
+            lineNumber: 144
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 145
+          },
+          __self: this
+        }, 2)))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 149
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 213
+            lineNumber: 150
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214
+            lineNumber: 151
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
-          onChange: function onChange(e) {
-            return _this2.setState({
-              children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
-            }, function () {
-              this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-            });
-          },
+          id: "selectionChildren4",
+          value: this.props.data.children4,
+          onChange: this.twoCallsChildren4,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 215
+            lineNumber: 152
           },
           __self: this
-        }, optionsChildren))));
+        }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 153
+          },
+          __self: this
+        }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 154
+          },
+          __self: this
+        }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 155
+          },
+          __self: this
+        }, 2)))));
       } else {
         select = react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemWrapNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226
+            lineNumber: 163
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Heading2Nay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227
+            lineNumber: 164
           },
           __self: this
         }, "Room ", this.state.room), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(ItemNay, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 228
+            lineNumber: 165
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Checkbox, {
@@ -2874,87 +2549,87 @@ function (_React$Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 166
           },
           __self: this
         }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 230
+            lineNumber: 167
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231
+            lineNumber: 168
           },
           __self: this
         }, "Adults"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232
+            lineNumber: 169
           },
           __self: this
         }, "(18+)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 233
+            lineNumber: 170
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 234
+            lineNumber: 171
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 235
+            lineNumber: 172
           },
           __self: this
         }, 2))), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Slot, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 238
+            lineNumber: 176
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 239
+            lineNumber: 177
           },
           __self: this
         }, "Children"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(P, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 240
+            lineNumber: 178
           },
           __self: this
         }, "(0-17)"), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("select", {
           disabled: true,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 241
+            lineNumber: 179
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 242
+            lineNumber: 180
           },
           __self: this
         }, 0), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 243
+            lineNumber: 181
           },
           __self: this
         }, 1), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("option", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 244
+            lineNumber: 182
           },
           __self: this
         }, 2)))));
@@ -2963,16 +2638,59 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(GridItem, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 190
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Box, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 191
         },
         __self: this
       }, select));
+    }
+  }, {
+    key: "functionOneAdult4",
+    value: function functionOneAdult4(e) {
+      e.persist();
+      this.setState({
+        adults: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoAdult4",
+    value: function functionTwoAdult4(e) {
+      e.persist();
+      document.getElementById('selectionAdults4').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+      if (this.props.data !== undefined) {
+        this.props.data.adults4 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+      }
+    }
+  }, {
+    key: "functionOneChildren4",
+    value: function functionOneChildren4(e) {
+      e.persist();
+      this.setState({
+        children: _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value)
+      }, function () {
+        this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+      });
+    }
+  }, {
+    key: "functionTwoChildren4",
+    value: function functionTwoChildren4(e) {
+      e.persist();
+
+      if (true) {
+        document.getElementById('selectionChildren4').value = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+
+        if (this.props.data !== undefined) {
+          this.props.data.children4 = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(e.target.value);
+        }
+      }
     }
   }, {
     key: "componentWillReceiveProps",
@@ -3029,7 +2747,8 @@ __webpack_require__.r(__webpack_exports__);
 var parsedData = '';
 
 if (typeof Storage !== "undefined") {
-  parsedData = JSON.parse(localStorage.getItem('submittedData')); // localStorage.clear();
+  parsedData = JSON.parse(localStorage.getItem('submittedData')); // console.log('clear');
+  // localStorage.clear();
 } else {
   parsedData = [];
 }
@@ -3665,7 +3384,7 @@ module.exports = function (it) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.5' };
+var core = module.exports = { version: '2.6.9' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -5137,12 +4856,14 @@ var enumKeys = __webpack_require__(/*! ./_enum-keys */ "./node_modules/@babel/ru
 var isArray = __webpack_require__(/*! ./_is-array */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-array.js");
 var anObject = __webpack_require__(/*! ./_an-object */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_an-object.js");
 var isObject = __webpack_require__(/*! ./_is-object */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_is-object.js");
+var toObject = __webpack_require__(/*! ./_to-object */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-object.js");
 var toIObject = __webpack_require__(/*! ./_to-iobject */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-iobject.js");
 var toPrimitive = __webpack_require__(/*! ./_to-primitive */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_to-primitive.js");
 var createDesc = __webpack_require__(/*! ./_property-desc */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_property-desc.js");
 var _create = __webpack_require__(/*! ./_object-create */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-create.js");
 var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn-ext.js");
 var $GOPD = __webpack_require__(/*! ./_object-gopd */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopd.js");
+var $GOPS = __webpack_require__(/*! ./_object-gops */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js");
 var $DP = __webpack_require__(/*! ./_object-dp */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-dp.js");
 var $keys = __webpack_require__(/*! ./_object-keys */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-keys.js");
 var gOPD = $GOPD.f;
@@ -5159,7 +4880,7 @@ var SymbolRegistry = shared('symbol-registry');
 var AllSymbols = shared('symbols');
 var OPSymbols = shared('op-symbols');
 var ObjectProto = Object[PROTOTYPE];
-var USE_NATIVE = typeof $Symbol == 'function';
+var USE_NATIVE = typeof $Symbol == 'function' && !!$GOPS.f;
 var QObject = global.QObject;
 // Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
 var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
@@ -5269,7 +4990,7 @@ if (!USE_NATIVE) {
   $DP.f = $defineProperty;
   __webpack_require__(/*! ./_object-gopn */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gopn.js").f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(/*! ./_object-pie */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-pie.js").f = $propertyIsEnumerable;
-  __webpack_require__(/*! ./_object-gops */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_object-gops.js").f = $getOwnPropertySymbols;
+  $GOPS.f = $getOwnPropertySymbols;
 
   if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_library.js")) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
@@ -5318,6 +5039,16 @@ $export($export.S + $export.F * !USE_NATIVE, 'Object', {
   getOwnPropertyNames: $getOwnPropertyNames,
   // 19.1.2.8 Object.getOwnPropertySymbols(O)
   getOwnPropertySymbols: $getOwnPropertySymbols
+});
+
+// Chrome 38 and 39 `Object.getOwnPropertySymbols` fails on primitives
+// https://bugs.chromium.org/p/v8/issues/detail?id=3443
+var FAILS_ON_PRIMITIVES = $fails(function () { $GOPS.f(1); });
+
+$export($export.S + $export.F * FAILS_ON_PRIMITIVES, 'Object', {
+  getOwnPropertySymbols: function getOwnPropertySymbols(it) {
+    return $GOPS.f(toObject(it));
+  }
 });
 
 // 24.3.2 JSON.stringify(value [, replacer [, space]])
@@ -5419,7 +5150,7 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js");
+/* harmony import */ var _emotion_memoize__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @emotion/memoize */ "./node_modules/@emotion/is-prop-valid/node_modules/@emotion/memoize/dist/memoize.browser.esm.js");
 
 
 var reactPropsRegex = /^((children|dangerouslySetInnerHTML|key|ref|autoFocus|defaultValue|defaultChecked|innerHTML|suppressContentEditableWarning|suppressHydrationWarning|valueLink|accept|acceptCharset|accessKey|action|allow|allowUserMedia|allowPaymentRequest|allowFullScreen|allowTransparency|alt|async|autoComplete|autoPlay|capture|cellPadding|cellSpacing|challenge|charSet|checked|cite|classID|className|cols|colSpan|content|contentEditable|contextMenu|controls|controlsList|coords|crossOrigin|data|dateTime|default|defer|dir|disabled|download|draggable|encType|form|formAction|formEncType|formMethod|formNoValidate|formTarget|frameBorder|headers|height|hidden|high|href|hrefLang|htmlFor|httpEquiv|id|inputMode|integrity|is|keyParams|keyType|kind|label|lang|list|loop|low|marginHeight|marginWidth|max|maxLength|media|mediaGroup|method|min|minLength|multiple|muted|name|nonce|noValidate|open|optimum|pattern|placeholder|playsInline|poster|preload|profile|radioGroup|readOnly|referrerPolicy|rel|required|reversed|role|rows|rowSpan|sandbox|scope|scoped|scrolling|seamless|selected|shape|size|sizes|slot|span|spellCheck|src|srcDoc|srcLang|srcSet|start|step|style|summary|tabIndex|target|title|type|useMap|value|width|wmode|wrap|about|datatype|inlist|prefix|property|resource|typeof|vocab|autoCapitalize|autoCorrect|autoSave|color|itemProp|itemScope|itemType|itemID|itemRef|results|security|unselectable|accentHeight|accumulate|additive|alignmentBaseline|allowReorder|alphabetic|amplitude|arabicForm|ascent|attributeName|attributeType|autoReverse|azimuth|baseFrequency|baselineShift|baseProfile|bbox|begin|bias|by|calcMode|capHeight|clip|clipPathUnits|clipPath|clipRule|colorInterpolation|colorInterpolationFilters|colorProfile|colorRendering|contentScriptType|contentStyleType|cursor|cx|cy|d|decelerate|descent|diffuseConstant|direction|display|divisor|dominantBaseline|dur|dx|dy|edgeMode|elevation|enableBackground|end|exponent|externalResourcesRequired|fill|fillOpacity|fillRule|filter|filterRes|filterUnits|floodColor|floodOpacity|focusable|fontFamily|fontSize|fontSizeAdjust|fontStretch|fontStyle|fontVariant|fontWeight|format|from|fr|fx|fy|g1|g2|glyphName|glyphOrientationHorizontal|glyphOrientationVertical|glyphRef|gradientTransform|gradientUnits|hanging|horizAdvX|horizOriginX|ideographic|imageRendering|in|in2|intercept|k|k1|k2|k3|k4|kernelMatrix|kernelUnitLength|kerning|keyPoints|keySplines|keyTimes|lengthAdjust|letterSpacing|lightingColor|limitingConeAngle|local|markerEnd|markerMid|markerStart|markerHeight|markerUnits|markerWidth|mask|maskContentUnits|maskUnits|mathematical|mode|numOctaves|offset|opacity|operator|order|orient|orientation|origin|overflow|overlinePosition|overlineThickness|panose1|paintOrder|pathLength|patternContentUnits|patternTransform|patternUnits|pointerEvents|points|pointsAtX|pointsAtY|pointsAtZ|preserveAlpha|preserveAspectRatio|primitiveUnits|r|radius|refX|refY|renderingIntent|repeatCount|repeatDur|requiredExtensions|requiredFeatures|restart|result|rotate|rx|ry|scale|seed|shapeRendering|slope|spacing|specularConstant|specularExponent|speed|spreadMethod|startOffset|stdDeviation|stemh|stemv|stitchTiles|stopColor|stopOpacity|strikethroughPosition|strikethroughThickness|string|stroke|strokeDasharray|strokeDashoffset|strokeLinecap|strokeLinejoin|strokeMiterlimit|strokeOpacity|strokeWidth|surfaceScale|systemLanguage|tableValues|targetX|targetY|textAnchor|textDecoration|textRendering|textLength|to|transform|u1|u2|underlinePosition|underlineThickness|unicode|unicodeBidi|unicodeRange|unitsPerEm|vAlphabetic|vHanging|vIdeographic|vMathematical|values|vectorEffect|version|vertAdvY|vertOriginX|vertOriginY|viewBox|viewTarget|visibility|widths|wordSpacing|writingMode|x|xHeight|x1|x2|xChannelSelector|xlinkActuate|xlinkArcrole|xlinkHref|xlinkRole|xlinkShow|xlinkTitle|xlinkType|xmlBase|xmlns|xmlnsXlink|xmlLang|xmlSpace|y|y1|y2|yChannelSelector|z|zoomAndPan|for|class|autofocus)|(([Dd][Aa][Tt][Aa]|[Aa][Rr][Ii][Aa]|x)-.*))$/; // https://esbench.com/bench/5bfee68a4cd7e6009ef61d23
@@ -5439,10 +5170,10 @@ var index = Object(_emotion_memoize__WEBPACK_IMPORTED_MODULE_0__["default"])(fun
 
 /***/ }),
 
-/***/ "./node_modules/@emotion/memoize/dist/memoize.browser.esm.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@emotion/memoize/dist/memoize.browser.esm.js ***!
-  \*******************************************************************/
+/***/ "./node_modules/@emotion/is-prop-valid/node_modules/@emotion/memoize/dist/memoize.browser.esm.js":
+/*!*******************************************************************************************************!*\
+  !*** ./node_modules/@emotion/is-prop-valid/node_modules/@emotion/memoize/dist/memoize.browser.esm.js ***!
+  \*******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5457,69 +5188,6 @@ function memoize(fn) {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (memoize);
-
-
-/***/ }),
-
-/***/ "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@emotion/unitless/dist/unitless.browser.esm.js ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var unitlessKeys = {
-  animationIterationCount: 1,
-  borderImageOutset: 1,
-  borderImageSlice: 1,
-  borderImageWidth: 1,
-  boxFlex: 1,
-  boxFlexGroup: 1,
-  boxOrdinalGroup: 1,
-  columnCount: 1,
-  columns: 1,
-  flex: 1,
-  flexGrow: 1,
-  flexPositive: 1,
-  flexShrink: 1,
-  flexNegative: 1,
-  flexOrder: 1,
-  gridRow: 1,
-  gridRowEnd: 1,
-  gridRowSpan: 1,
-  gridRowStart: 1,
-  gridColumn: 1,
-  gridColumnEnd: 1,
-  gridColumnSpan: 1,
-  gridColumnStart: 1,
-  msGridRow: 1,
-  msGridRowSpan: 1,
-  msGridColumn: 1,
-  msGridColumnSpan: 1,
-  fontWeight: 1,
-  lineHeight: 1,
-  opacity: 1,
-  order: 1,
-  orphans: 1,
-  tabSize: 1,
-  widows: 1,
-  zIndex: 1,
-  zoom: 1,
-  WebkitLineClamp: 1,
-  // SVG-related properties
-  fillOpacity: 1,
-  floodOpacity: 1,
-  stopOpacity: 1,
-  strokeDasharray: 1,
-  strokeDashoffset: 1,
-  strokeMiterlimit: 1,
-  strokeOpacity: 1,
-  strokeWidth: 1
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
 
 
 /***/ }),
@@ -6434,17 +6102,6 @@ module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269
 
 /***/ }),
 
-/***/ "./node_modules/react-dom/index.js":
-/*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_6dc2816e14fab51b8269 ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/react-dom/index.js");
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -6740,16 +6397,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(stylis_rule_sheet__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/unitless */ "./node_modules/@emotion/unitless/dist/unitless.browser.esm.js");
+/* harmony import */ var _emotion_unitless__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @emotion/unitless */ "./node_modules/styled-components/node_modules/@emotion/unitless/dist/unitless.browser.esm.js");
 /* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
 /* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_is__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var memoize_one__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! memoize-one */ "./node_modules/memoize-one/dist/memoize-one.esm.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @emotion/is-prop-valid */ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js");
-
+/* harmony import */ var _emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @emotion/is-prop-valid */ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js");
 
 
 
@@ -7207,7 +6861,7 @@ var addUpUntilIndex = function addUpUntilIndex(sizes, index) {
 var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
   var el = document.createElement('style');
   el.setAttribute(SC_ATTR, '');
-  el.setAttribute(SC_VERSION_ATTR, "4.2.0");
+  el.setAttribute(SC_VERSION_ATTR, "4.2.1");
 
   var nonce = getNonce();
   if (nonce) {
@@ -7236,7 +6890,7 @@ var makeStyleTag = function makeStyleTag(target, tagEl, insertBefore) {
 var wrapAsHtmlTag = function wrapAsHtmlTag(css, names) {
   return function (additionalAttrs) {
     var nonce = getNonce();
-    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.2.0" + '"', additionalAttrs];
+    var attrs = [nonce && 'nonce="' + nonce + '"', SC_ATTR + '="' + stringifyNames(names) + '"', SC_VERSION_ATTR + '="' + "4.2.1" + '"', additionalAttrs];
 
     var htmlAttr = attrs.filter(Boolean).join(' ');
     return '<style ' + htmlAttr + '>' + css() + '</style>';
@@ -7248,7 +6902,7 @@ var wrapAsElement = function wrapAsElement(css, names) {
   return function () {
     var _props;
 
-    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.2.0", _props);
+    var props = (_props = {}, _props[SC_ATTR] = stringifyNames(names), _props[SC_VERSION_ATTR] = "4.2.1", _props);
 
     var nonce = getNonce();
     if (nonce) {
@@ -7655,7 +7309,7 @@ var StyleSheet = function () {
     var isStreamed = false;
 
     /* retrieve all of our SSR style elements from the DOM */
-    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.2.0" + '"]');
+    var nodes = document.querySelectorAll('style[' + SC_ATTR + '][' + SC_VERSION_ATTR + '="' + "4.2.1" + '"]');
 
     var nodesSize = nodes.length;
 
@@ -7995,14 +7649,27 @@ var isFalsish = function isFalsish(chunk) {
   return chunk === undefined || chunk === null || chunk === false || chunk === '';
 };
 
-var objToCss = function objToCss(obj, prevKey) {
-  var css = Object.keys(obj).filter(function (key) {
-    return !isFalsish(obj[key]);
-  }).map(function (key) {
-    if (isPlainObject(obj[key])) return objToCss(obj[key], key);
-    return hyphenateStyleName(key) + ': ' + addUnitIfNeeded(key, obj[key]) + ';';
-  }).join(' ');
-  return prevKey ? prevKey + ' {\n  ' + css + '\n}' : css;
+var objToCssArray = function objToCssArray(obj, prevKey) {
+  var rules = [];
+  var keys = Object.keys(obj);
+
+  keys.forEach(function (key) {
+    if (!isFalsish(obj[key])) {
+      if (isPlainObject(obj[key])) {
+        rules.push.apply(rules, objToCssArray(obj[key], key));
+
+        return rules;
+      } else if (isFunction(obj[key])) {
+        rules.push(hyphenateStyleName(key) + ':', obj[key], ';');
+
+        return rules;
+      }
+      rules.push(hyphenateStyleName(key) + ': ' + addUnitIfNeeded(key, obj[key]) + ';');
+    }
+    return rules;
+  });
+
+  return prevKey ? [prevKey + ' {'].concat(rules, ['}']) : rules;
 };
 
 function flatten(chunk, executionContext, styleSheet) {
@@ -8049,7 +7716,7 @@ function flatten(chunk, executionContext, styleSheet) {
   }
 
   /* Handle objects */
-  return isPlainObject(chunk) ? objToCss(chunk) : chunk.toString();
+  return isPlainObject(chunk) ? objToCssArray(chunk) : chunk.toString();
 }
 
 // 
@@ -8648,60 +8315,6 @@ var StyleSheetManager = function (_Component) {
 
 // 
 
-var didWarnAboutClassNameUsage = new Set();
-
-var classNameUsageCheckInjector = (function (target) {
-  var elementClassName = '';
-
-  var targetCDM = target.componentDidMount;
-
-  // eslint-disable-next-line no-param-reassign
-  target.componentDidMount = function componentDidMount() {
-    if (typeof targetCDM === 'function') {
-      targetCDM.call(this);
-    }
-
-    var forwardTarget = this.props.forwardedComponent.target;
-
-    if (target.props && target.props.suppressClassNameWarning || target.attrs && target.attrs.suppressClassNameWarning || didWarnAboutClassNameUsage.has(forwardTarget)) {
-      return;
-    }
-
-    didWarnAboutClassNameUsage.add(forwardTarget);
-
-    var classNames = elementClassName.replace(/\s+/g, ' ').trim().split(' ');
-    // eslint-disable-next-line react/no-find-dom-node
-    var node = react_dom__WEBPACK_IMPORTED_MODULE_7___default.a.findDOMNode(this);
-    var selector = classNames.map(function (s) {
-      return '.' + s;
-    }).join('');
-
-    if (node && node.nodeType === 1 && !classNames.every(function (className) {
-      return node.classList && node.classList.contains(className);
-    }) && !node.querySelector(selector)) {
-      // eslint-disable-next-line no-console
-      console.warn('It looks like you\'ve wrapped styled() around your React component (' + getComponentName(forwardTarget) + '), but the className prop is not being passed down to a child. No styles will be rendered unless className is composed within your React component.');
-    }
-  };
-
-  var prevRenderInner = target.renderInner;
-
-  // eslint-disable-next-line no-param-reassign
-  target.renderInner = function renderInner() {
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    var element = prevRenderInner.apply(this, args);
-
-    elementClassName = element.props.className;
-
-    return element;
-  };
-});
-
-// 
-
 var identifiers = {};
 
 /* We depend on components having unique IDs */
@@ -8746,7 +8359,7 @@ var StyledComponent = function (_Component) {
       _this.warnAttrsFnObjectKeyDeprecated = once(function (key, displayName) {
         return (
           // eslint-disable-next-line no-console
-          console.warn('Functions as object-form attrs({}) keys are now deprecated and will be removed in a future version of styled-components. Switch to the new attrs(props => ({})) syntax instead for easier and more powerful composition. The attrs key in question is "' + key + '" on component "' + displayName + '".')
+          console.warn('Functions as object-form attrs({}) keys are now deprecated and will be removed in a future version of styled-components. Switch to the new attrs(props => ({})) syntax instead for easier and more powerful composition. The attrs key in question is "' + key + '" on component "' + displayName + '".', '\n ' + new Error().stack)
         );
       });
 
@@ -8756,10 +8369,6 @@ var StyledComponent = function (_Component) {
           console.warn('It looks like you\'ve used a non styled-component as the value for the "' + key + '" prop in an object-form attrs constructor of "' + displayName + '".\n' + 'You should use the new function-form attrs constructor which avoids this issue: attrs(props => ({ yourStuff }))\n' + "To continue using the deprecated object syntax, you'll need to wrap your component prop in a function to make it available inside the styled component (you'll still get the deprecation warning though.)\n" + ('For example, { ' + key + ': () => InnerComponent } instead of { ' + key + ': InnerComponent }'))
         );
       });
-    }
-
-    if ( true && IS_BROWSER) {
-      classNameUsageCheckInjector(_this);
     }
     return _this;
   }
@@ -8819,9 +8428,9 @@ var StyledComponent = function (_Component) {
         this.warnInnerRef(displayName);
       }
 
-      if (key === 'forwardedComponent' || key === 'as' || key === 'suppressClassNameWarning') {
+      if (key === 'forwardedComponent' || key === 'as') {
         continue;
-      } else if (key === 'forwardedRef') propsForElement.ref = computedProps[key];else if (!isTargetTag || Object(_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_8__["default"])(key)) {
+      } else if (key === 'forwardedRef') propsForElement.ref = computedProps[key];else if (!isTargetTag || Object(_emotion_is_prop_valid__WEBPACK_IMPORTED_MODULE_7__["default"])(key)) {
         // Don't pass through non HTML tags through to HTML elements
         propsForElement[key] = computedProps[key];
       }
@@ -8937,15 +8546,18 @@ function createStyledComponent(target, options, rules) {
    * forwardRef creates a new interim component, which we'll take advantage of
    * instead of extending ParentComponent to create _another_ interim class
    */
-  var WrappedStyledComponent = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef(function (props, ref) {
+  var WrappedStyledComponent = void 0;
+  var forwardRef = function forwardRef(props, ref) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(ParentComponent, _extends({}, props, { forwardedComponent: WrappedStyledComponent, forwardedRef: ref }));
-  });
+  };
+  forwardRef.displayName = displayName;
+  WrappedStyledComponent = react__WEBPACK_IMPORTED_MODULE_2___default.a.forwardRef(forwardRef);
+  WrappedStyledComponent.displayName = displayName;
 
   // $FlowFixMe
   WrappedStyledComponent.attrs = finalAttrs;
   // $FlowFixMe
   WrappedStyledComponent.componentStyle = componentStyle;
-  WrappedStyledComponent.displayName = displayName;
 
   // $FlowFixMe
   WrappedStyledComponent.foldedComponentIds = isTargetStyledComp ? // $FlowFixMe
@@ -9264,6 +8876,69 @@ if ( true && typeof window !== 'undefined' && typeof navigator !== 'undefined' &
 //# sourceMappingURL=styled-components.browser.esm.js.map
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/styled-components/node_modules/@emotion/unitless/dist/unitless.browser.esm.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/styled-components/node_modules/@emotion/unitless/dist/unitless.browser.esm.js ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var unitlessKeys = {
+  animationIterationCount: 1,
+  borderImageOutset: 1,
+  borderImageSlice: 1,
+  borderImageWidth: 1,
+  boxFlex: 1,
+  boxFlexGroup: 1,
+  boxOrdinalGroup: 1,
+  columnCount: 1,
+  columns: 1,
+  flex: 1,
+  flexGrow: 1,
+  flexPositive: 1,
+  flexShrink: 1,
+  flexNegative: 1,
+  flexOrder: 1,
+  gridRow: 1,
+  gridRowEnd: 1,
+  gridRowSpan: 1,
+  gridRowStart: 1,
+  gridColumn: 1,
+  gridColumnEnd: 1,
+  gridColumnSpan: 1,
+  gridColumnStart: 1,
+  msGridRow: 1,
+  msGridRowSpan: 1,
+  msGridColumn: 1,
+  msGridColumnSpan: 1,
+  fontWeight: 1,
+  lineHeight: 1,
+  opacity: 1,
+  order: 1,
+  orphans: 1,
+  tabSize: 1,
+  widows: 1,
+  zIndex: 1,
+  zoom: 1,
+  WebkitLineClamp: 1,
+  // SVG-related properties
+  fillOpacity: 1,
+  floodOpacity: 1,
+  stopOpacity: 1,
+  strokeDasharray: 1,
+  strokeDashoffset: 1,
+  strokeMiterlimit: 1,
+  strokeOpacity: 1,
+  strokeWidth: 1
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (unitlessKeys);
+
 
 /***/ }),
 

@@ -129,94 +129,30 @@ class Room2 extends React.Component{
 		let optionsAdults = '';
 		let optionsChildren = '';
 
-
-		if(this.props.data !== undefined){
-			if(this.props.data.adults2 === 2){
-				optionsAdults=
-					<React.Fragment>
-					<option>{1}</option>
-					<option selected>{2}</option>
-					</React.Fragment>
-			}
-			else{
-				optionsAdults=
-					<React.Fragment>
-					<option selected>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
-			}
-
-			if(this.props.data.children2 === 0){
-				optionsChildren =
-					<React.Fragment>
-					<option selected>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
-			}
-			else if(this.props.data.children2 === 1){
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option selected>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
-			}
-			else if(this.props.data.children2 === 2){
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option selected>{2}</option>
-					</React.Fragment>
-			}
-			else{
-				optionsChildren =
-					<React.Fragment>
-					<option>{0}</option>
-					<option>{1}</option>
-					<option>{2}</option>
-					</React.Fragment>
-			}
-		}	
-		else{
-			optionsAdults =
-				<React.Fragment>
-				<option>{1}</option>
-				<option>{2}</option>
-				</React.Fragment>
-
-			optionsChildren =
-				<React.Fragment>
-				<option>{0}</option>
-				<option>{1}</option>
-				<option>{2}</option>
-				</React.Fragment>
-		}
-
 		if(this.state.check===true){
+			console.log('true');
 			select = 
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
 						<Item>
-							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+						<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
 							<Slot>
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selection' onChange={e=>this.setState({adults: parseInt(e.target.value)}, function () {this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-								})}>
-								{optionsAdults}
+								<select id='selectionAdults2' value={this.props.data.adults2} onChange={this.twoCallsAdult2}>
+								<option>{1}</option>
+								<option>{2}</option>
 								</select>
 								</div>
 							</Slot>
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
-								<select onChange={e=>this.setState({children: parseInt(e.target.value)}, function () {
-										this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
-				        		})}>
-								{optionsChildren}
+								<select id='selectionChildren2' value={this.props.data.children2} onChange={this.twoCallsChildren2}>
+								<option>{0}</option>
+								<option>{1}</option>
+								<option>{2}</option>
 								</select>
 							</Slot>
 						</Item>
@@ -227,24 +163,28 @@ class Room2 extends React.Component{
 				<ItemWrapNay>
 					<Heading2Nay>Room {this.state.room}</Heading2Nay>
 						<ItemNay>
-								<Checkbox type='checkbox' onClick={() => this.getStuff()} />
-							<Slot>
-								<P>Adults</P>
-								<P>(18+)</P>
-								<select disabled>
-									<option>{1}</option>
-									<option>{2}</option>
-								</select>
-							</Slot>
-							<Slot>	
-								<P>Children</P>
-								<P>(0-17)</P>
-								<select disabled>
-									<option>{0}</option>
-									<option>{1}</option>
-									<option>{2}</option>
-								</select>
-							</Slot>	
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} />
+
+									<Slot>
+										<P>Adults</P>
+										<P>(18+)</P>
+	
+										<select disabled>
+										<option>{1}</option>
+										<option>{2}</option>
+										</select>
+	
+									</Slot>
+									<Slot>
+										<P>Children</P>
+										<P>(0-17)</P>
+										<select disabled>
+										<option>{0}</option>
+										<option>{1}</option>
+										<option>{2}</option>
+										</select>
+									</Slot>
+
 						</ItemNay>
 				</ItemWrapNay>
 		}
@@ -258,6 +198,49 @@ class Room2 extends React.Component{
 		);
 	}
 
+	twoCallsAdult2 = e => {
+		e.persist();
+  		this.functionOneAdult2(e)
+  		this.functionTwoAdult2(e)
+	}
+
+	functionOneAdult2(e){
+		e.persist();
+		this.setState({adults: parseInt(e.target.value)}, function (){
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+		})
+	}
+
+	functionTwoAdult2(e){
+		e.persist();
+		document.getElementById('selectionAdults2').value = parseInt(e.target.value);
+		if(this.props.data!==undefined){
+			this.props.data.adults2 = parseInt(e.target.value);
+		}
+	}
+
+	twoCallsChildren2 = e => {
+		e.persist();
+  		this.functionOneChildren2(e)
+  		this.functionTwoChildren2(e)
+	}
+
+	functionOneChildren2(e){
+		e.persist();
+		this.setState({children: parseInt(e.target.value)}, function () {
+			this.props.fromChildToParentCallback([this.state.check, this.state.room, this.state.adults, this.state.children]);
+		})
+	}
+
+	functionTwoChildren2(e){
+		e.persist();
+		if (process.browser){
+			document.getElementById('selectionChildren2').value = parseInt(e.target.value);
+			if(this.props.data!==undefined){
+				this.props.data.children2 = parseInt(e.target.value);
+			}
+		}
+	}
 
 	componentWillReceiveProps(nextProps) {
   		if(this.props != nextProps) {

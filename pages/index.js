@@ -25,6 +25,7 @@ class Index extends React.Component {
  	render () {
     	return(
     		<Wrap>
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<Parent peter={parsedData} />
 			</Wrap>
     	)
