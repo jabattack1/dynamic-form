@@ -14,15 +14,15 @@ const GridWrap = styled.div`
 const Submit = styled.button`
 	position: relative;
 	display: flex;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: -20px;
+	margin-left: 525px;
 `;
 
 const Clear = styled.button`
 	position: relative;
 	display: flex;
-	margin-top: -20px;
-	margin-left: 525px;
+	margin-top: 10px;
+	margin-left: 10px;
 `;
 
 
@@ -219,8 +219,8 @@ class Parent extends React.Component {
 	    return(
 	    	<GridWrap>
 	    		{children}
-				<Submit type='button' onClick={() => this.storeStuff()}>Submit</Submit>
 				<Clear type='button' onClick={() => this.eraseStuff()}>Clear</Clear>
+				<Submit type='button' onClick={() => this.storeStuff()}>Submit</Submit>
 			</GridWrap>
 		)
 	} 
