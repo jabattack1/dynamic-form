@@ -15,7 +15,7 @@ const Submit = styled.button`
 	position: relative;
 	display: flex;
 	margin-top: -20px;
-	margin-left: 505px;
+	margin-left: 515px;
 `;
 
 const Clear = styled.button`
