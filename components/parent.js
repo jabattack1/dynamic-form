@@ -228,10 +228,12 @@ class Parent extends React.Component {
 	storeStuff(){
 		let status = this.state
 		localStorage.setItem('submittedData', JSON.stringify(status));
+		location.reload();
 	}
 
 	eraseStuff(){
 		localStorage.clear();
+		location.reload();
 	}
 
 }
