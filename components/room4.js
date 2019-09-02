@@ -130,7 +130,7 @@ class Room4 extends React.Component{
 		let optionsChildren = '';
 
 		if(this.state.check===true){
-		// if(this.props.data !== undefined){
+		if(this.props.data !== undefined){
 			select = 
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
@@ -140,23 +140,54 @@ class Room4 extends React.Component{
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selectionAdults4' value={this.props.data.adults3} onChange={this.twoCallsAdult4}>
-								<option>{1}</option>
-								<option>{2}</option>
-								</select>
+									<select id='selectionAdults4' value={this.props.data.adults4} onChange={this.twoCallsAdult4}>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
 								</div>
 							</Slot>
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
 								<select id='selectionChildren4' value={this.props.data.children4} onChange={this.twoCallsChildren4}>
-								<option>{0}</option>
-								<option>{1}</option>
-								<option>{2}</option>
+									<option>{0}</option>
+									<option>{1}</option>
+									<option>{2}</option>
 								</select>
 							</Slot>
 						</Item>
 				</ItemWrap>
+			}
+			else{
+			select = 
+				<ItemWrap>
+					<Heading2>Room {this.state.room}</Heading2>
+						<Item>
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+
+								<Slot>
+									<P>Adults</P>
+									<P>(18+)</P>
+	
+									<select id='selectionAdults4' onChange={this.twoCallsAdult4}>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
+	
+								</Slot>
+								<Slot>
+									<P>Children</P>
+									<P>(0-17)</P>
+									<select id='selectionChildren4' onChange={this.twoCallsChildren4}>
+										<option>{0}</option>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
+								</Slot>
+
+						</Item>
+				</ItemWrap>
+			}
 		}
 		else{
 			select = 
@@ -164,24 +195,23 @@ class Room4 extends React.Component{
 					<Heading2Nay>Room {this.state.room}</Heading2Nay>
 						<ItemNay>
 							<Checkbox type='checkbox' onClick={() => this.getStuff()} />
-									<Slot>
-										<P>Adults</P>
-										<P>(18+)</P>
-										<select disabled>
+								<Slot>
+									<P>Adults</P>
+									<P>(18+)</P>
+									<select disabled>
 										<option>{1}</option>
 										<option>{2}</option>
-										</select>
-
-									</Slot>
-									<Slot>
-										<P>Children</P>
-										<P>(0-17)</P>
-										<select disabled>
+									</select>
+								</Slot>
+								<Slot>
+									<P>Children</P>
+									<P>(0-17)</P>
+									<select disabled>
 										<option>{0}</option>
 										<option>{1}</option>
 										<option>{2}</option>
-										</select>
-									</Slot>
+									</select>
+								</Slot>
 						</ItemNay>
 				</ItemWrapNay>
 		}

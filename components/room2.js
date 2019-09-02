@@ -131,6 +131,7 @@ class Room2 extends React.Component{
 
 		if(this.state.check===true){
 			console.log('true');
+			if(this.props.data !== undefined){
 			select = 
 				<ItemWrap>
 					<Heading2>Room {this.state.room}</Heading2>
@@ -140,23 +141,54 @@ class Room2 extends React.Component{
 								<P>Adults</P>
 								<P>(18+)</P>
 								<div>
-								<select id='selectionAdults2' value={this.props.data.adults2} onChange={this.twoCallsAdult2}>
-								<option>{1}</option>
-								<option>{2}</option>
-								</select>
+									<select id='selectionAdults2' value={this.props.data.adults2} onChange={this.twoCallsAdult2}>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
 								</div>
 							</Slot>
 							<Slot>
 								<P>Children</P>
 								<P>(0-17)</P>
 								<select id='selectionChildren2' value={this.props.data.children2} onChange={this.twoCallsChildren2}>
-								<option>{0}</option>
-								<option>{1}</option>
-								<option>{2}</option>
+									<option>{0}</option>
+									<option>{1}</option>
+									<option>{2}</option>
 								</select>
 							</Slot>
 						</Item>
 				</ItemWrap>
+			}
+			else{
+			select = 
+				<ItemWrap>
+					<Heading2>Room {this.state.room}</Heading2>
+						<Item>
+							<Checkbox type='checkbox' onClick={() => this.getStuff()} checked/>
+
+								<Slot>
+									<P>Adults</P>
+									<P>(18+)</P>
+	
+									<select id='selectionAdults2' onChange={this.twoCallsAdult2}>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
+	
+								</Slot>
+								<Slot>
+									<P>Children</P>
+									<P>(0-17)</P>
+									<select id='selectionChildren2' onChange={this.twoCallsChildren2}>
+										<option>{0}</option>
+										<option>{1}</option>
+										<option>{2}</option>
+									</select>
+								</Slot>
+
+						</Item>
+				</ItemWrap>
+			}
 		}
 		else{
 			select = 
@@ -165,25 +197,25 @@ class Room2 extends React.Component{
 						<ItemNay>
 							<Checkbox type='checkbox' onClick={() => this.getStuff()} />
 
-									<Slot>
-										<P>Adults</P>
-										<P>(18+)</P>
+								<Slot>
+									<P>Adults</P>
+									<P>(18+)</P>
 	
-										<select disabled>
+									<select disabled>
 										<option>{1}</option>
 										<option>{2}</option>
-										</select>
+									</select>
 	
-									</Slot>
-									<Slot>
-										<P>Children</P>
-										<P>(0-17)</P>
-										<select disabled>
+								</Slot>
+								<Slot>
+									<P>Children</P>
+									<P>(0-17)</P>
+									<select disabled>
 										<option>{0}</option>
 										<option>{1}</option>
 										<option>{2}</option>
-										</select>
-									</Slot>
+									</select>
+								</Slot>
 
 						</ItemNay>
 				</ItemWrapNay>

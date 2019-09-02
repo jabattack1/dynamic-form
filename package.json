@@ -16,7 +16,7 @@
     "react-dom": "^16.8.6",
     "react-select": "^2.4.3",
     "react-test-renderer": "^16.8.6",
-    "styled-components": "^4.2.1"
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "dev": "next",

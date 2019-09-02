@@ -6,8 +6,8 @@ import Room2 from '../components/room2.js';
 import Room3 from '../components/room3.js';
 import Room4 from '../components/room4.js';
 
-const gridWrap = styled.div`
-	width: calc(100%);
+const GridWrap = styled.div`
+	margin:0 auto;
 `;
 
 
@@ -21,8 +21,8 @@ const Submit = styled.button`
 const Clear = styled.button`
 	position: relative;
 	display: flex;
-	margin-top: 30px;
-	margin-left: 10px;
+	margin-top: -20px;
+	margin-left: 525px;
 `;
 
 
@@ -139,90 +139,89 @@ class Parent extends React.Component {
 
 	  		if(this.state.checked === 2){
 	  		children = 
-	  			<gridWrap>
+	  			<GridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
 					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} data={chips} check={false} />
 					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
-				</gridWrap>
+				</GridWrap>
 	  	}
 	  	else if(this.state.checked === 3){
 	  		children = 
-	  			<gridWrap>
+	  			<GridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
 					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} data={chips} check={true} />
 					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
-				</gridWrap>
+				</GridWrap>
 	  	}
 
 	  	else if(this.state.checked === 4){
 	  		children = 
-	  			<gridWrap>
+	  			<GridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
 					<Room2  fromChildToParentCallback={room2Value} data={chips} check={true} />
 					<Room3  fromChildToParentCallback={room3Value} data={chips} check={true} />
 					<Room4  fromChildToParentCallback={room4Value} data={chips} check={true} /> 
-				</gridWrap>
+				</GridWrap>
 	  	}
 	  	else{
 	  		children =
-	  			<gridWrap>
+	  			<GridWrap>
 				    <Room1  fromChildToParentCallback={room1Value} data={chips} />
 					<Room2  fromChildToParentCallback={room2Value} data={chips} check={false} />
 					<Room3  fromChildToParentCallback={room3Value} data={chips} check={false} />
 					<Room4  fromChildToParentCallback={room4Value} data={chips} check={false} /> 
-				</gridWrap>
+				</GridWrap>
 	  	}
 		}
 		else{
 			if(this.state.checked === 2){
 		  		children = 
-		  			<gridWrap>
+		  			<GridWrap>
 					    <Room1  fromChildToParentCallback={room1Value} />
 						<Room2  fromChildToParentCallback={room2Value} check={true} />
 						<Room3  fromChildToParentCallback={room3Value} check={false} />
 						<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-					</gridWrap>
+					</GridWrap>
 	  		}
 	  		else if(this.state.checked === 3){
 		  		children = 
-		  			<gridWrap>
+		  			<GridWrap>
 					    <Room1  fromChildToParentCallback={room1Value} />
 						<Room2  fromChildToParentCallback={room2Value} check={true} />
 						<Room3  fromChildToParentCallback={room3Value} check={true} />
 						<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-					</gridWrap>
+					</GridWrap>
 	  		}
 
 	  		else if(this.state.checked === 4){
 		  		children = 
-		  			<gridWrap>
+		  			<GridWrap>
 					    <Room1  fromChildToParentCallback={room1Value} />
 						<Room2  fromChildToParentCallback={room2Value} check={true} />
 						<Room3  fromChildToParentCallback={room3Value} check={true} />
 						<Room4  fromChildToParentCallback={room4Value} check={true} /> 
-					</gridWrap>
+					</GridWrap>
 	  		}
 	  		else{
-
+	  			console.log('empty');
 		  		children =
-		  			<gridWrap>
+		  			<GridWrap>
 					    <Room1  fromChildToParentCallback={room1Value} />
 						<Room2  fromChildToParentCallback={room2Value} check={false} />
 						<Room3  fromChildToParentCallback={room3Value} check={false} />
 						<Room4  fromChildToParentCallback={room4Value} check={false} /> 
-					</gridWrap>
+					</GridWrap>
 	  		}
 		}
 
-
 	    return(
-	    	<gridWrap>
+	    	<GridWrap>
 	    		{children}
 				<Submit type='button' onClick={() => this.storeStuff()}>Submit</Submit>
 				<Clear type='button' onClick={() => this.eraseStuff()}>Clear</Clear>
-			</gridWrap>
+			</GridWrap>
 		)
 	} 
 
